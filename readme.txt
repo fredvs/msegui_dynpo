@@ -3,21 +3,23 @@ It does not use the mseconst_xx.pas of each language and so does not bloat up yo
 
 User may add new po files without the need to recompile the application.
 
-Just copy + paste all the files in /src into the root source directory of your application.
+Here how to install:
 
-There are 2 files to adapt: mseconst.pas for the default data and msestockobjects.pas for the enums.
+Copy + paste all the files in "/msegui_dynpo/src" into the root source directory of your application.
+
+There are 2 files to adapt: "mseconst.pas" for the default data and "msestockobjects.pas" for the enums.
 
   This are the arrays needed by msegui himself:
    lang_stockcaption, lang_modalresult, lang_modalresultnoshortcut : array of msestring;
    
-  This are custom arrays needed by the applications you may adapt it as you want:
+  This are custom arrays needed by the applications, you may adapt it as you want:
    lang_langnames, lang_mainform, lang_settings, lang_actionsmodule, lang_projectoptions,
    lang_sourceform, lang_extended : array of msestring
 
-There is unit po2const.pas that you may uses to fill the arrays from the po file.
-Uses procedure createnewlang to do it.
+There is unit "po2const.pas" you may use to fill the arrays from the po file.
+Run  "procedure createnewlang(thelang)" at init of your application and when changing language.
 
-To enable internalization, at creating form or when changing language, do for example for a caption button:
+To enable internalization, at creating form or when changing language for example a caption button, do:
 
- buttonok.Caption   := lang_modalresult[Ord(mr_ok)] ;
-  
+ Mybutton.Caption   := lang_mainform[Ord(ma_wishsearch)] ;
+   
