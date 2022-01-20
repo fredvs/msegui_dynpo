@@ -24,52 +24,18 @@ uses
   msetypes;
 
 type
+  defaultmodalresulttextty  = array[modalresultty] of msestring;
+  pdefaultmodalresulttextty = ^defaultmodalresulttextty;
+  
+  stockcaptionaty  = array[stockcaptionty] of msestring;
+  pstockcaptionaty = ^stockcaptionaty;
+  
   extendedaty  = array[extendedty] of msestring;
   pextendedaty = ^extendedaty;
 
+  // your custom array
   mainformaty  = array[mainformty] of msestring;
   pmainformaty = ^mainformaty;
-
-  sourceformaty  = array[sourceformty] of msestring;
-  psourceformaty = ^sourceformaty;
-
-  actionsmoduleaty  = array[actionsmodulety] of msestring;
-  pactionsmoduleaty = ^actionsmoduleaty;
-
-  projectoptionsconaty  = array[projectoptionsconty] of msestring;
-  pprojectoptionsconaty = ^projectoptionsconaty;
-
-  projectoptionsaty  = array[projectoptionsty] of msestring;
-  pprojectoptionsaty = ^projectoptionsaty;
-
-  isettingsaty  = array[isettingsty] of msestring;
-  pisettingsaty = ^isettingsaty;
-
-  stockcaptionaty  = array[stockcaptionty] of msestring;
-  pstockcaptionaty = ^stockcaptionaty;
-
-  defaultmodalresulttextty  = array[modalresultty] of msestring;
-  pdefaultmodalresulttextty = ^defaultmodalresulttextty;
-
-type
-  langinfoty = record
-    Name: string;
-    extendedtext: pextendedaty;
-    mainformtext: pmainformaty;
-    stockcaption: pstockcaptionaty;
-    sourceformtext: psourceformaty;
-    settingstext: pisettingsaty;
-    projectoptionstext: pprojectoptionsaty;
-    projectoptionscontext: pprojectoptionsconaty;
-    actionsmoduletext: pactionsmoduleaty;
-    modalresulttext: pdefaultmodalresulttextty;
-    modalresulttextnoshortcut: pdefaultmodalresulttextty;
-  end;
-
-  userlanginfoty = record
-    Name: string;
-    Caption: msestringarty;
-  end;
 
 const
   en_modalresulttext: defaultmodalresulttextty =
@@ -114,344 +80,6 @@ const
     'Skip',         //mr_skip
     'Skip all',     //mr_skipall
     'Continue'      //mr_continue
-    );
-
-  en_mainformtext: mainformaty           = (
-    'Unresolved references in',
-    'to',
-    'Do you wish to search the formfile?',
-    'Formfile for',
-    'Formfiles',
-    'Recursive form hierarchy for',
-    'Classtype',
-    'Unable to open file',
-    '*** Running ***',
-    'Downloading',
-    'Downloaded',
-    'Start gdb server command',
-    'Start gdb Server',
-    'gdb server start error',
-    'gdb server start canceled.',
-    'Can not run start gdb command.',
-    'Uploadcommand',
-    'Download ***ERROR***',
-    'Download finished.',
-    'Download canceled.',
-    'Select ancestor',
-    'New form',
-    'Pascal Files',
-    'Can not load Project',
-    'Select project template',
-    'Project files',
-    'All files',
-    'Select program file',
-    'Pascal program files',
-    'C program files',
-    'New Project',
-    'Can not start process',
-    'Process',
-    'Process terminated',
-    'Process terminated normally.',
-    'Make ***ERROR***',
-    'Make OK.',
-    'Source has changed, do you wish to remake project?',
-    'Load Window Layout',
-    'Docking area'
-    );
-
-  en_actionsmoduletext: actionsmoduleaty = (
-    'Configure ideU',
-    'Process ID',
-    'Attach to process',
-    'Unknown moduleclass for',
-    'Inherited component',
-    'can not be deleted.',
-    'Make aborted.',
-    'Download aborted.',
-    'Runerror with',
-    'Error: Timeout.',
-    'Making.',
-    'Make not running.',
-    'Downloading.',
-    'Download not running.',
-    'running.',
-    'Script',
-    'Recursive form inheritance of',
-    'Component',
-    'exists.',
-    'Ancestor for',
-    'not found.',
-    'Module',
-    'Invalid name',
-    'Invalid methodname',
-    'Module not found',
-    'Method not found',
-    'Published (managed) method',
-    'does not exist.',
-    'Do you wish to delete the event?',
-    'Method',
-    'has different parameters.',
-    'A module',
-    'is already open.',
-    'Unresolved reference(s) to',
-    'Module(s):',
-    'Can not read formfile',
-    'Invalid component name.',
-    'Invalid exception',
-    'T&ools',
-    'All Files',
-    'MSE Program',
-    'MSE Unit',
-    'MSE Textfile',
-    'Mainform',
-    'Simple Form',
-    'Docking Form',
-    'Datamodule',
-    'Subform',
-    'Scrollboxform',
-    'Tabform',
-    'Dockpanel',
-    'Report',
-    'Scriptform',
-    'Inherited Form',
-    'Do you want to replace the settings by',
-    'File',
-    'Do you want to overwrite?',
-    'Unknown',
-    'Startup',
-    'GDB died',
-    'Breakpoint hit',
-    'Watchpoint triggered',
-    'Read Watchpoint triggered',
-    'Access Watchpoint triggered',
-    'End stepping range',
-    'Function finished',
-    'Exited normally',
-    'Exited',
-    'Detached',
-    'Signal received',
-    'Stop error',
-    'Can not read project',
-    'Object Inspector',
-    'Store Component',
-    'Attaching Process',
-    'Loading'
-    );
-
-  en_projectoptionscontext: projectoptionsconaty = (
-    'Wrong encoding can damage your source files.',
-    'Do you wish to set encoding to',
-    '*** WARNING ***',
-    'Hangup',
-    'Interrupt',
-    'Leave',
-    'Illegal instruction',
-    'Trace trap',
-    'Abort process',
-    'BUS error',
-    'Floating-point exception',
-    'Kill',
-    'User-defined signal 1',
-    'Segmentation violation',
-    'User-defined signal 2',
-    'Broken pipe',
-    'Alarm clock',
-    'Termination',
-    'Stack fault',
-    'Child status has changed',
-    'Proceed',
-    'Stop, unblockable',
-    'Keyboard stop',
-    'Background read from tty',
-    'Background write to tty',
-    'Urgent condition on socket',
-    'CPU limit exceeded',
-    'File size limit exceeded',
-    'Virtual alarm clock',
-    'Profiling alarm clock',
-    'Window size change',
-    'I/O now possible',
-    'Power failure restart'
-    );
-
-  en_settingstext: isettingsaty          = (
-    'Apply',                   //se_apply
-    'sak voice assistive config', //se_groupassistive
-    'Parent directory of sakit', //se_sakitdir
-    'Enable sak assistive at loading', //se_enableassistive
-    'System layout',           //se_groupsystemlayout
-    'Universal path layout',   //se_universalpath
-    'No Z order handling',     //se_nozorder
-    'Use shift key to select a word', //se_doubleclic
-    'Auto focus in main-menu', //se_autofocusmenu
-    'Full path of project in window title', //se_fullpath
-    'Set dialog-forms as modal vs as tool', //se_modaldial
-    'Font height',             //se_fontsize
-    'Font name',               //se_fontname
-    'No confirmation to delete row', //se_confirmdel
-    'Blinking caret',          //se_blinkcaret
-    'Repaint canvas',          //se_repaintcanvas
-    'Source Editor',           //se_groupsourceeditor
-    'Use those options instead of project options', //se_usedefaulteditoroptions
-    'Add space after comma -> auto-parsing', //se_addwhiteaftercomma
-    'When a file has changed', //se_groupfilechange
-    'No dialog box => reload the new one', //se_filereload
-    'No dialog box => keep the old one', //se_filenoload
-    'A dialog box ask what to do...', //se_fileaskload
-    'Rectangle around multi-select' //se_rectanglearea
-    );
-
-  en_projectoptionstext: projectoptionsaty = (
-    'Project options',                           // po_projectoptions
-    'Editor',                                    // po_editor
-    'Right margin line',                         // po_rightmarginline
-    'Mark Brackets',                             //  po_markbrackets
-    'Line Numbers',                              //  po_linenumbers
-    'Mark Pairwords',                            //  po_markpairwords
-    'Trim trailing whitespace',                  //  po_trimtrailing on save
-    'Auto Indent',                               //  po_autoindent
-    'No Source Editor',                          //  po_nosource
-    'Tab indent',                                //  po_tabindent
-    'Space tab',                                 //  po_spacetab
-    'Show tabs',                                 //  po_showtabs
-    'Anti aliased font',                         //  po_antialiasedfont
-    'Encoding',                                  //  po_encoding
-    'Mark Color',                                //  po_markcolor
-    'Stat Color',                                // po_statcolor
-    'Scr Y',                                     // po_scrollbary
-    'Nb char',                                   // po_nbchar
-    'EOL Style',                                 //  po_eolstyle
-    'Backup',                                    //  po_backup
-    'Tabstops',                                  //  po_tabstops
-    'ExtS',                                      //  po_extraspace
-    'Extra space between lines',                 //  po_extraspacehint
-    'Width',                                     //  po_width
-    'Height',                                    //  po_height
-    'Font',                                      //  po_font
-    'Font Bk. color',                            //  po_fontbkcolor
-    'Font color',                                //  po_fontcolor
-    'File filter',                               //  po_filefilter
-    'File mask',                                 //  po_filemask
-    'Syntax definition file',                    //  po_syntaxdeffile
-    'Code Templates',                            //  po_codetemplate
-    'Code template directories, file extension = .mct', //  po_fontcodetemplatedir
-    'Select unit directory',                     // po_selectunitdir
-    '&Debugger',                                 // po_debuggerpage
-    'Project Debugger',                          // po_projectdebugger
-    'Search &Directories',                       // po_searchdirectories
-    'Search path to get infos about code',       // po_searchdirectorieshint
-    'Select source directory',                   // po_selectsourcedir
-    'Object &Base Directory (empty = Make Directory)', // po_objectbasedir
-    'Select source base directory',              // po_selectsourcebasedir
-    'Defi&nes',                                  // po_defines
-    '&Signals',                                  // po_signals
-    '&Exception',                                // po_exception
-    '&Target',                                   // po_target
-    'Start gdb server command attach target',    // po_startgdbattachtarget
-    'No wait for exit',                          // po_nogdbserverexit
-    'Before connect gdb script',                 // po_beforeconnect
-    'Before load gdb script',                    // po_beforeload
-    'Before run gdb script',                     // po_beforerun
-    'After connect gdb script',                  // po_afterconnect
-    'After load gdb script',                     // po_afterload
-    'Start gdb server command run target',       // gdbservercommand
-    'Wait before connect',                       // po_gdbserverwait
-    'Start once',                                // po_gdbserverstartonce
-    'Download command',                          // po_uploadcommand
-    'Processor',                                 // po_gdbprocessor
-    'Simulator',                                 // po_gdbsimulator
-    'gdb download',                              // po_gdbdownload
-    'Startup BKPT',                              // po_startupbkpt
-    'Target connection',                         // po_remoteconnection
-    'Always download',                           // po_downloadalways
-    'Always download before run',                // po_downloadalwayshint
-    'Load Timeout',                              // po_gdbloadtimeout
-    '&Extern Console',                           // po_externalconsole
-    '&Stop on Exc',                              // po_stoponexception
-    'Stop on exceptions',                        // po_stoponexceptionhint
-    '&Acti-Break',                               // po_activateonbreak
-    'Activate on Break',                         // po_activateonbreakhint
-    '&Value Hints',                              // po_valuehints
-    'Call GUI_DEB',                              // po_nodebugbeginend
-    'Release mouse grab by target stop. gdb sometimes crashes with this option.', // po_nodebugbeginendhint
-    'Set TT&Y',                                  // po_settty
-    '&Raise-Break',                              // po_raiseonbreak
-    'Raise on break',                            // po_raiseonbreakhint
-    '&FPC bugs',                                 // po_fpcgdbworkaround
-    'Use workarounds for FPC/gdb bugs',          // po_fpcgdbworkaroundhint
-    'Debug &target',                             // po_debugtarget
-    'xterm command',                             // po_xtermcommand
-    'Run command',                               // po_runcommand
-    'Default Debugger',                          // po_debugcommand
-    'Debug &options',                            // po_debugoptions
-    '&Make',                                     // po_makepage
-    'Default make col',                          // po_defaultmake
-    'Mainfile',                                  // po_mainfile
-    'Select mainfile',                           // po_selectmainfile
-    'Targetfile name',                           // po_targetfile
-    'Select target file',                        // po_selecttargetfile
-    'Default Compiler',                          // po_makecommand
-    'Select make command',                       // po_selectmakecommand
-    'Show Command Line',                         // po_showcommandline
-    'Copy messages to file',                     // po_copymessages
-    'Close message',                             // po_closemessages
-    'Check head',                                // po_checkmethods
-    'Check method headers',                      // po_checkmethodshint
-    'Project Compiler',                          // po_projectcompiler
-    'Command before',                            // po_commandbefore
-    'Make options',                              // po_makeoptions
-    'Directories',                               // po_directories
-    'Command after',                             // po_commandafter
-    'Exe Extension',                             // po_exeextension
-    'Comments',                                  // po_comments
-    'Make Directory',                            // po_makedir
-    'Select make directory',                     // po_selectmakedir
-    'Error Color',                               // po_colorerror
-    'Warning Color',                             // po_colorwarning
-    'Note Color',                                // po_colornote
-    'Strip ESC',                                 // po_stripmessageesc
-    'Strip ESC sequences in Messages and Terminal form', // po_stripmessageeschint
-    'Show Console',                              // po_showconsole
-    'Purpose',                                   //po_enablepurpose
-    'Message output file',                       // po_messageoutputfile
-    'Macros',                                    // po_macros
-    'Active group',                              // po_selectactivegroupgrid
-    '&Font Alias',                               // po_fontaliaspage
-    'Designers',                                 // po_designers
-    'User &Colors',                              // po_usercolors
-    'Copy "setcolormapvalue" code to clipboard', // po_copycolor
-    'F&ormat Macros',                            // po_formatmacro
-    'Used by formatfloatmse() and formatdatetimemse()', // po_formatmacrohint
-    'Templates',                                 // po_templates
-    'New project',                               // po_newproject
-    'Script before copy',                        // po_scriptbeforecopy
-    'Script after copy',                         // po_scriptaftercopy
-    'New File',                                  // po_newfile
-    'New Form',                                  // po_newform
-    'Storage',                                   // po_storage
-    'Infos',                                     // po_infos
-    'Full name of project',                      // po_projectfullname
-    'Creator',                                   // po_creator
-    'License',                                   // po_license
-    'Date of creation'                             // po_projectdate
-
-    );
-
-  en_sourceformtext: sourceformaty       = (
-    'has changed.',
-    'There are modifications in edit buffer also.',
-    'Do you wish to reload from disk?',
-    '<none>',
-    'Do you wish to replace:',
-    'with:',
-    '<new>',
-    'Syntaxdeffile:',
-    'Text',
-    'Restart from begin of file?',
-    'Cancel?',
-    'Do you wish to to replace this occurence?',
-    'Go to line number:',
-    'Find line'
     );
 
   en_stockcaption: stockcaptionaty       = (
@@ -602,137 +230,33 @@ const
     'Volume down',                             //sc_volumedown
     'Volume up',                               //sc_volumeup
     'Cancel speech',                           //sc_cancelspeech
-    'Target',                                  //sc_target
-    'View',                                    //sc_view
-    'Forms',                                   //sc_forms
-    'Layout',                                  //sc_layout
-    'Syntax',                                  //sc_syntax
-    'Project',                                 //sc_project
-    'Edited',                                  //sc_edited
-    'Widgets',                                 //sc_widgets
-    'Settings',                                //sc_settings
-    'About',                                   //sc_about
     'New',                                     //sc_newfile
-    'Save as...',                              //sc_saveas
-    'Save all',                                //sc_saveall
-    'Close all',                               //sc_closeall
-    'Print',                                   //sc_print
-    'Quit',                                    //sc_quit
-    'Line',                                    //sc_line
-    'Search again',                            //sc_search_again
-    'Search back',                             //sc_search_back
-    'Find & replace',                          //sc_find_replace
-    'Find in files',                           //sc_find_infile
-    'Procedures list',                         //sc_proclist
-    'Select edit page',                        //sc_select_edit_Page
-    'Copy word at cursor',                     //sc_Copy_word_cursor
-    'Copy LaTeX',                              //sc_copy_latex
-    'Indent',                                  //sc_ident
-    'Unindent',                                //sc_uident
-    'Environment',                             //sc_environment
-    'Attach process',                          //sc_attachprocess
-    'Attach target',                           //sc_attachtarget
-    'Detach target',                           //sc_detachtarget
-    'Download',                                //sc_download
     'Tools',                                   //sc_tools
-    'Make',                                    // sc_make
-    'Build',                                   // sc_build
-    'Abort make',                              // sc_abortmake
-    'Debug-Run',                               // sc_debugrun
-    'Options',                                 // sc_options
-    'Tree',                                    // sc_tree
-    'Source',                                  // sc_source
-    'Open copy',                               // sc_opencopy
-    'Save copy as',                            // sc_saveascopy
-    'Beautifier',                              // sc_beautifier
-    'Panels',                                  // sc_panels
-    'Force Z order',                           // sc_forcezorder
-    'Tree list',                               // sc_treelist
-    'Messages',                                // sc_messages
-    'Find result',                             // sc_findresult
-    'Commander',                               // sc_commander
-    'Symbols',                                 // sc_symbols
-    'Watches',                                 // sc_watches
-    'Stack',                                   // sc_stack
-    'Threads',                                 // sc_threads
-    'CPU',                                     // sc_cpu
-    'Assembler',                               // sc_assembler
-    'Breakpoints',                             // sc_breakpoints
-    'Watchpoints',                             // sc_watchpoints
-    'Memory',                                  // sc_memory
-    'Target console',                          // sc_targetconsole
-    'Toggle form/unit',                        // sc_toggleformunit
-    'MSE modules',                             // sc_msemod
-    'Close all MSE modules',                   // sc_closeallmsemod
-    'General settings',                        // sc_generalsettings
-    'Extra settings',                          // sc_extrasettings
     'Languages',                               // sc_lang
-    'Configure widgets',                       // sc_configwidgets
-    'Configure compilers',                     // sc_configcompilers
-    'Configure debuggers',                     // sc_configdebuggers
-    'Themes',                                  // sc_themes
     'Directory',                               // sc_directory
     'No icons',                                // sc_noicons
     'No lateral',                              // sc_themes
     'Compact',                                 // sc_compact
-    'Open project',                            // sc_openproject
-    'Open file',                               // sc_openfile
     'Path',                                    // sc_path
-    'Other',                                   // sc_other
-    'Print command',                           // sc_printcommand
-    'Shortcut',                                // sc_shortcut
-    'Value',                                   // sc_value
-    'Case sensitive',                          // sc_casesensitive
-    'Selected only',                           // sc_selectedonly
-    'Whole word',                              // sc_wholeword
-    'Text to find',                            // sc_texttofind
-    'Search in current file',                  // sc_searchincurrentfile
-    'Search in open files',                    // sc_searchininopenfiles
-    'Search in project directory',             // sc_searchinprojectdir
-    'Search in directories',                   // sc_searchindirectories
-    'Include subdirectories',                  // sc_includesubdir
-    'Replace',                                 // sc_replace
-    'Replace all',                             // sc_replace all
-    'Replace with',                            // sc_replacewith
-    'Prompt on replace',                       // sc_promptonreplace
-    'Components palette',                      // sc_componentspalette
-    'Find components',                         // sc_findcomponent
-    'Reset',                                   // sc_reset
-    'Step',                                    // sc_cstep
-    'Step instruction',                        // sc_stepinstruction
-    'Next instruction',                        // sc_nextinstruction
-    'Restart debugger',                        // sc_restartdebugger
-    'Toggle breakpoint',                       // sc_togglebreakpoint
-    'Toggle breakpoint enabled',               // sc_tooglebreakpointenable
-    'Executed lines hint on/off',              // sc_execlinehinton
-    'Please compile it first.',                // sc_compileitfirst
-    'Finish',                                  // sc_finish
-    'Set as default',                          // sc_setasdefault
-    'Host',                                    // sc_host
-    'Copyright'                                // sc_copyright
-    );
+    'File'                                     // sc_file
+     );
 
   en_extendedtext: extendedaty =
     ('Delete selected row?',    // ex_del_row_selected
     'Delete %s selected rows?'  // ex_del_rows_selected
     );
+    
+   en_mainformtext: mainformaty           = (
+    'This is a test of internationalization.',
+    'That is a other test.',
+    'This is the end.'
+    );  
 
-  en_langnamestext: array[0..14] of msestring = (
+  en_langnamestext: array[0..3] of msestring = (
     'English [en]',
     'Russian [ru]',
     'French [fr]',
-    'German [de]',
-    'Spanish [es]',
-    'Portuguese [pt]',
-    'Chinese [zh]',
-    'Italian [it]',
-    'Dutch [nl]',
-    'Hebrew [he]',
-    'Indonesian [id]',
-    'Polish [pl]',
-    'Esperanto [eo]',
-    'Greek [el]',
-    'Arabic [ar]'
+    'German [de]'
     );
 
 implementation

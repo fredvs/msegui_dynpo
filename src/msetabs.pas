@@ -1048,7 +1048,7 @@ var
 
 implementation
 uses
-sourceform, sysutils,msearrayutils,msekeyboard,msestockobjects,msebits;
+sysutils,msearrayutils,msekeyboard,msestockobjects,msebits;
 
 type
  twidget1 = class(twidget);
@@ -2875,15 +2875,6 @@ begin
       
          w2 := w2 + tabs.flabel.width + 20;
       
-         if (info.pos.x >= w1) and (info.pos.x <= w2) and
-                   (info.pos.x > w2 - 20)then
-           begin
-                 found := true;
-                //   writeln('Yes close the tab' + inttostr(i));
-                 sourcefo.closeactivepage ;
-                // sleep(100);
-            end;
-    
          w1 := w2 + 1;
          inc(i);
       

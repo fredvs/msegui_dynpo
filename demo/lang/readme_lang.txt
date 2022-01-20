@@ -1,7 +1,7 @@
 
-To add a new language, use as layout of  '/demo_empty.po' and fill all the msgstr "" with the translation.
+To add a new language, use as layout of  '/podemo_empty.po' and fill all the msgstr "" with the translation.
 
-When done, rename the file with the code of your language after the "_" , like 'demo_xz.po'.
+When done, rename the file with the code of your language after the "_" , like 'podemo_xz.po'.
 
 You may also add the translation of the new language name at end of each .po file (not obligatory).
 Example add this at end of of the po files:

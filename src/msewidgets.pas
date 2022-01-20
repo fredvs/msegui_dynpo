@@ -1694,12 +1694,12 @@ function confirmsavechangedfile(const filename: filenamety;
 begin
  
   if multiple then begin
-   modalresult:= showmessage(lang_actionsmodule[ord(ac_file)] +' '+filename+' '+
+   modalresult:= showmessage(lang_stockcaption[ord(sc_file)] +' '+filename+' '+
                   lang_stockcaption[ord(sc_is_modified_save)],lang_stockcaption[ord(sc_confirmation)],
                    [mr_yes,mr_all,mr_no,mr_noall,mr_cancel],mr_yes);
   end
   else begin
-   modalresult:= showmessage(lang_actionsmodule[ord(ac_file)]+' '+filename+' '+
+   modalresult:= showmessage(lang_stockcaption[ord(sc_file)]+' '+filename+' '+
                   lang_stockcaption[ord(sc_is_modified_save)],lang_stockcaption[ord(sc_confirmation)],
                    [mr_yes,mr_no,mr_cancel],mr_yes);
   end;
