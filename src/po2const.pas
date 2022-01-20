@@ -29,7 +29,7 @@ implementation
 
 uses
   msestockobjects,
-  mseconstside;
+  mseconsts;
 
 var
   constvaluearray: array of msestring;
