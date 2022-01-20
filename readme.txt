@@ -14,6 +14,9 @@ There are 2 files to adapt: mseconst.pas for the default data and msestockobject
    lang_langnames, lang_mainform, lang_settings, lang_actionsmodule, lang_projectoptions,
    lang_sourceform, lang_extended : array of msestring
 
+There is unit po2const.pas that you may uses to fill the arrays from the po file.
+Uses procedure createnewlang to do it.
+
 To enable internalization, at creating form or when changing language, do for example for a caption button:
 
  buttonok.Caption   := lang_modalresult[Ord(mr_ok)] ;
