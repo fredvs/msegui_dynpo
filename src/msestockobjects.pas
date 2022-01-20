@@ -29,7 +29,7 @@ uses
 const
   boxsize      = 11;      //for treelistitem expand box
   checkboxsize = 13;      //for listitem checkbox
-
+  
 var
    // This are the arrays needed by msegui himself
    lang_stockcaption, lang_modalresult, lang_modalresultnoshortcut, lang_langnames: array of msestring;
@@ -37,6 +37,7 @@ var
    // This are custom arrays needed by the applications you may adapt it as you want.
    lang_mainform, lang_settings, lang_actionsmodule, lang_projectoptionscon, lang_projectoptions,
    lang_sourceform, lang_extended : array of msestring;
+  
 
 type
   stockbitmapty = (stb_default, stb_none,

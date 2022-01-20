@@ -1,4 +1,4 @@
-unit po2const;
+unit po2arrays;
 
 {$ifdef FPC}{$mode objfpc}{$h+}{$endif}
 interface
