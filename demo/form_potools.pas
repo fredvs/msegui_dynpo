@@ -119,9 +119,6 @@ begin
   else
   begin
   file1.writeln();
-  file1.writeln();
-  file1.writeln('msgstr ""');
-  file1.writeln();
   end;
 
   file1.writeln();
