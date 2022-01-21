@@ -215,30 +215,6 @@ msgstr "Format graphique non pris en charge"
 msgid "Graphic format error"
 msgstr "Erreur de format graphique"
 
-msgid "MS Bitmap"
-msgstr "MS Bitmap"
-
-msgid "MS Icon"
-msgstr "Icône MS"
-
-msgid "JPEG Image"
-msgstr "Image JPEG"
-
-msgid "PNG Image"
-msgstr "Image PNG"
-
-msgid "XPM Image"
-msgstr "Image XPM"
-
-msgid "PNM Image"
-msgstr "Image PNM"
-
-msgid "TARGA Image"
-msgstr "Image TARGA"
-
-msgid "TIFF Image"
-msgstr "Image TIFF"
-
 msgid "All Images"
 msgstr "Toutes les images"
 
@@ -574,4 +550,10 @@ msgstr "Français [fr]"
 
 msgid "German [de]"
 msgstr "Allemand [de]"
+
+msgid "Spanish [es]"
+msgstr "Espagnol [es]"
+
+msgid "Portuguese [pt]"
+msgstr "Portugais [pt]"
 

@@ -215,7 +215,7 @@ begin
 
       setlength(constvaluearray, 0);
 
-      file1.readln(str1);
+    //  file1.readln(str1);
 
       while not file1.EOF do
         begin

@@ -57,7 +57,7 @@ msgid "Cancel"
 msgstr "Abbrechen"
 
 msgid "Abort"
-msgstr "Abbrechen"
+msgstr "Abbruch"
 
 msgid "OK"
 msgstr "OK"
@@ -214,30 +214,6 @@ msgstr "Grafikformat wird nicht unterstützt"
 
 msgid "Graphic format error"
 msgstr "Grafikformatfehler"
-
-msgid "MS Bitmap"
-msgstr "MS-Bitmap"
-
-msgid "MS Icon"
-msgstr "MS-Symbol"
-
-msgid "JPEG Image"
-msgstr "JPEG-Bild"
-
-msgid "PNG Image"
-msgstr "PNG-Bild"
-
-msgid "XPM Image"
-msgstr "XPM-Bild"
-
-msgid "PNM Image"
-msgstr "PNM-Bild"
-
-msgid "TARGA Image"
-msgstr "TARGA-Bild"
-
-msgid "TIFF Image"
-msgstr "TIFF-Bild"
 
 msgid "All Images"
 msgstr "Alle Bilder"
@@ -468,7 +444,7 @@ msgid "First column"
 msgstr "Erste Spalte"
 
 msgid "First row"
-msgstr "Erste Reihe"
+msgstr "Erste Zeile"
 
 msgid "Last column"
 msgstr "Letzte Spalte"
@@ -574,4 +550,10 @@ msgstr "Französisch [fr]"
 
 msgid "German [de]"
 msgstr "Deutsch [de]"
+
+msgid "Spanish [es]"
+msgstr "Spanisch [es]"
+
+msgid "Portuguese [pt]"
+msgstr "Portugiesisch [pt]"
 

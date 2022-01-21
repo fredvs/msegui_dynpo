@@ -3,14 +3,14 @@ object headerfo: theaderfo
   bounds_x = 495
   bounds_y = 202
   bounds_cx = 446
-  bounds_cy = 385
+  bounds_cy = 415
   container.frame.localprops = []
   container.frame.localprops1 = []
   container.bounds = (
     0
     0
     446
-    385
+    415
   )
   options = [fo_screencentered, fo_autoreadstat, fo_autowritestat, fo_savepos, fo_savezorder, fo_savestate]
   caption = 'Po <> Po converter'
@@ -44,12 +44,12 @@ object headerfo: theaderfo
   end
   object tbutton2: tbutton
     taborder = 1
-    bounds_x = 25
-    bounds_y = 188
-    bounds_cx = 401
-    bounds_cy = 109
+    bounds_x = 33
+    bounds_y = 220
+    bounds_cx = 377
+    bounds_cy = 117
     state = [as_localdisabled, as_localcaption, as_localonexecute]
-    caption = 'After creating a translation from "podemo_empty.txt"   (by Google translate for example and saved as  "podemo_xz.txt" ("xz" is the code lang)).  Check if Google keep all the original lang code and did not translate some.  Convert it into Po file with original "msgid" + translated "msgstr" clicking here.  '
+    caption = 'After creating a translation from "podemo_empty.txt"   (by Google translate for example and saved as  "podemo_xz.txt" ("xz" is the code lang)).  Check if Google keep all the original lang code and did not translate some.  Convert it into Po file with original "msgid" + translated "msgstr" clicking here.    When done, paste that new po file into /lang directory.'
     textflags = [tf_left, tf_xcentered, tf_ycentered, tf_wordbreak]
     onexecute = createnew
   end
@@ -76,9 +76,10 @@ object headerfo: theaderfo
     bounds_x = 24
     bounds_y = 104
     bounds_cx = 402
-    bounds_cy = 28
+    bounds_cy = 52
     state = [as_localdisabled, as_localcaption, as_localonexecute]
-    caption = 'Create new "podemo_empty.po" file ready to be translated.'
+    caption = 'Create new "podemo_empty.po" file ready to be translated.   Paste a copy of it in /lang directory if arrays were updated.'
+    textflags = [tf_left, tf_xcentered, tf_ycentered, tf_wordbreak]
     onexecute = createnew
   end
   object outputdir: tfilenameeditx
@@ -120,7 +121,7 @@ object headerfo: theaderfo
     optionswidget1 = [ow1_fontglyphheight]
     taborder = 6
     bounds_x = 80
-    bounds_y = 312
+    bounds_y = 352
     bounds_cx = 298
     bounds_cy = 43
     caption = 'Sorry this form is not yet translated, feel free to do it as exercice! '
@@ -134,9 +135,9 @@ object headerfo: theaderfo
     Tag = 2
     taborder = 7
     bounds_x = 24
-    bounds_y = 144
+    bounds_y = 168
     bounds_cx = 402
-    bounds_cy = 28
+    bounds_cy = 36
     state = [as_localdisabled, as_localcaption, as_localonexecute]
     caption = 'Create new "podemo_empty.txt" file ready for Google Translate'
     onexecute = createnew
@@ -150,7 +151,7 @@ object headerfo: theaderfo
     bounds_x = 4
     bounds_y = 5
     bounds_cx = 440
-    bounds_cy = 378
+    bounds_cy = 402
     object labdone: tlabel
       optionswidget1 = [ow1_fontglyphheight, ow1_autoscale, ow1_autoheight]
       color = -2147483645

@@ -215,30 +215,6 @@ msgstr "Графический формат не поддерживается"
 msgid "Graphic format error"
 msgstr "Ошибка графического формата"
 
-msgid "MS Bitmap"
-msgstr "Растровое изображение MS"
-
-msgid "MS Icon"
-msgstr "Значок MS"
-
-msgid "JPEG Image"
-msgstr "Изображение JPEG"
-
-msgid "PNG Image"
-msgstr "Изображение PNG"
-
-msgid "XPM Image"
-msgstr "Изображение XPM"
-
-msgid "PNM Image"
-msgstr "Изображение PNM"
-
-msgid "TARGA Image"
-msgstr "Изображение TARGA"
-
-msgid "TIFF Image"
-msgstr "Изображение TIFF"
-
 msgid "All Images"
 msgstr "Все изображения"
 
@@ -574,4 +550,10 @@ msgstr "Французский [fr]"
 
 msgid "German [de]"
 msgstr "немецкий [de]"
+
+msgid "Spanish [es]"
+msgstr "Испанский [es]"
+
+msgid "Portuguese [pt]"
+msgstr "Португальский [pt]"
 

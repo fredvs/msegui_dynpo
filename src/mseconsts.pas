@@ -26,10 +26,10 @@ uses
 type
   defaultmodalresulttextty  = array[modalresultty] of msestring;
   pdefaultmodalresulttextty = ^defaultmodalresulttextty;
-  
+
   stockcaptionaty  = array[stockcaptionty] of msestring;
   pstockcaptionaty = ^stockcaptionaty;
-  
+
   extendedaty  = array[extendedty] of msestring;
   pextendedaty = ^extendedaty;
 
@@ -128,14 +128,6 @@ const
     'Can not read directory',                  //sc_can_not_read_directory
     'Graphic format not supported',            //sc_graphic_not_supported
     'Graphic format error',                    //sc_graphic_format_error
-    'MS Bitmap',                               //sc_MS_Bitmap
-    'MS Icon',                                 //sc_MS_Icon
-    'JPEG Image',                              //sc_JPEG_Image
-    'PNG Image',                               //sc_PNG_Image
-    'XPM Image',                               //sc_XPM_Image
-    'PNM Image',                               //sc_PNM_Image
-    'TARGA Image',                             //sc_TARGA_image
-    'TIFF Image',                              //sc_TIFF_image
     'All Images',                              //sc_All
     'Confirmation',                            //sc_Confirmation
     'Delete record?',                          //sc_Delete_record_question
@@ -245,18 +237,20 @@ const
     ('Delete selected row?',    // ex_del_row_selected
     'Delete %s selected rows?'  // ex_del_rows_selected
     );
-    
+
    en_mainformtext: mainformaty           = (
     'This is a test of internationalization.',
     'That is a other test.',
     'This is the end.'
-    );  
+    );
 
-  en_langnamestext: array[0..3] of msestring = (
+  en_langnamestext: array[0..5] of msestring = (
     'English [en]',
     'Russian [ru]',
     'French [fr]',
-    'German [de]'
+    'German [de]',
+    'Spanish [es]',
+    'Portuguese [pt]'
     );
 
 implementation

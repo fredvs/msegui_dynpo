@@ -13,8 +13,8 @@ There are 2 files to adapt: "mseconst.pas" for the default data and "msestockobj
   This are the arrays needed by msegui himself:
    lang_stockcaption, lang_modalresult, lang_modalresultnoshortcut : array of msestring;
    
-  There is a custom array that can be used by the application, you may adapt it as you want with the enum in "msestockobjects.pas":
- lang_mainform  : array of msestring
+ There is a lang_mainform array is in "mseconsts.pas". that can be used by the application,  you may adapt it as you want.
+His enum is  in "msestockobjects.pas":
 
 There is demo in "/msegui_dynpo/demo". You will need to copy all the files of "/msegui_dynpo/src"  into that /demo directory.
 
