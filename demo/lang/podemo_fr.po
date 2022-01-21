@@ -564,7 +564,7 @@ msgid "This is the end."
 msgstr "C'est la fin."
 
 msgid "English [en]"
-msgstr "Anglais [fr]"
+msgstr "Anglais [en]"
 
 msgid "Russian [ru]"
 msgstr "Russe [ru]"
