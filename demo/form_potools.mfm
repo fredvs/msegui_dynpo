@@ -44,12 +44,12 @@ object headerfo: theaderfo
   end
   object tbutton2: tbutton
     taborder = 1
-    bounds_x = 41
+    bounds_x = 25
     bounds_y = 188
-    bounds_cx = 369
-    bounds_cy = 101
+    bounds_cx = 401
+    bounds_cy = 109
     state = [as_localdisabled, as_localcaption, as_localonexecute]
-    caption = 'After creating a translation from "demo_empty.txt"   (by Google translate for example and saved as  "demo_xz.txt" ("xz" is the code lang)).     Convert it into Po file with original "msgid" + translated "msgstr" clicking here.'
+    caption = 'After creating a translation from "podemo_empty.txt"   (by Google translate for example and saved as  "podemo_xz.txt" ("xz" is the code lang)).  Check if Google keep all the original lang code and did not translate some.  Convert it into Po file with original "msgid" + translated "msgstr" clicking here.  '
     textflags = [tf_left, tf_xcentered, tf_ycentered, tf_wordbreak]
     onexecute = createnew
   end
@@ -73,12 +73,12 @@ object headerfo: theaderfo
   object tbutton4: tbutton
     Tag = 1
     taborder = 4
-    bounds_x = 40
+    bounds_x = 24
     bounds_y = 104
-    bounds_cx = 370
+    bounds_cx = 402
     bounds_cy = 28
     state = [as_localdisabled, as_localcaption, as_localonexecute]
-    caption = 'Create new "demo_empty.po" file ready to be translated.'
+    caption = 'Create new "podemo_empty.po" file ready to be translated.'
     onexecute = createnew
   end
   object outputdir: tfilenameeditx
@@ -130,21 +130,32 @@ object headerfo: theaderfo
     textflags = [tf_ycentered, tf_wordbreak]
     reffontheight = 19
   end
+  object tbutton3: tbutton
+    Tag = 2
+    taborder = 7
+    bounds_x = 24
+    bounds_y = 144
+    bounds_cx = 402
+    bounds_cy = 28
+    state = [as_localdisabled, as_localcaption, as_localonexecute]
+    caption = 'Create new "podemo_empty.txt" file ready for Google Translate'
+    onexecute = createnew
+  end
   object paneldone: tgroupbox
     frame.colorclient = 16765345
     frame.localprops = [frl_colorclient]
     frame.localprops1 = []
     taborder = 3
     visible = False
-    bounds_x = -12
-    bounds_y = -227
+    bounds_x = 4
+    bounds_y = 5
     bounds_cx = 440
-    bounds_cy = 282
+    bounds_cy = 378
     object labdone: tlabel
       optionswidget1 = [ow1_fontglyphheight, ow1_autoscale, ow1_autoheight]
       color = -2147483645
       bounds_x = 44
-      bounds_y = 101
+      bounds_y = 157
       bounds_cx = 353
       bounds_cy = 48
       caption = 'Done.'
@@ -154,17 +165,6 @@ object headerfo: theaderfo
       textflags = [tf_xcentered, tf_ycentered]
       reffontheight = 48
     end
-  end
-  object tbutton3: tbutton
-    Tag = 2
-    taborder = 7
-    bounds_x = 40
-    bounds_y = 144
-    bounds_cx = 370
-    bounds_cy = 28
-    state = [as_localdisabled, as_localcaption, as_localonexecute]
-    caption = 'Create new "empty.txt" file ready for Google Translate'
-    onexecute = createnew
   end
   object ttimer1: ttimer
     interval = 500000
