@@ -10,8 +10,6 @@ uses
   gettext,
   form_conflang,
   form_potools;
-var
-  MSELang: string = '';
 
 begin
   Gettext.GetLanguageIDs(MSELang, MSEFallbackLang);

@@ -33,7 +33,8 @@ uses
  msebitmap,msearrayprops,msethreadcomp,mserichstring,msearrayutils
                    {$ifdef mse_with_ifi},mseifiglob,mseificompglob{$endif};
  var                  
- MSEFallbacklang: string = '';                   
+ MSEFallbacklang: string = '';      
+ MSELang: string = '';              
 
 const
  mseguiversiontext = '5.6.4';
