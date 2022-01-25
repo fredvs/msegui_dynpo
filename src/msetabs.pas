@@ -15,7 +15,7 @@ interface
 uses
  msetabsglob,msewidgets,mseclasses,msearrayprops,classes,mclasses,mseshapes,
  mserichstring,msetypes,msegraphics,msegraphutils,mseevent,mseinterfaces,
- mseglob,mseguiglob,msegui,msebitmap,msedragglob, 
+ mseglob,mseguiglob,msegui,msebitmap,msedragglob,
  {mseforms,}rtlconsts,msesimplewidgets,msedrag,mseact,
  mseobjectpicker,msepointer,msestat,msestatfile,msestrings,msemenus,
  msedrawtext,msetimer;
@@ -250,7 +250,7 @@ type
    function getframestateflags: framestateflagsty; virtual;
    function getedgeshift(): int32;
   public
-   
+
    constructor create(const aowner: tcustomtabbar;
                            aclasstype: indexpersistentclassty); reintroduce;
    destructor destroy; override;
@@ -1048,7 +1048,13 @@ var
 
 implementation
 uses
-sysutils,msearrayutils,msekeyboard,msestockobjects,msebits;
+ sysutils,msearrayutils,msekeyboard,
+{$ifdef mse_dynpo}
+ msestockobjects_dynpo,
+{$else}
+ msestockobjects,
+{$endif}
+ msebits;
 
 type
  twidget1 = class(twidget);
@@ -2856,28 +2862,28 @@ begin
  if not (csdesigning in componentstate) or
                             (ws1_designactive in fwidgetstate1) then begin
   with flayoutinfo do begin
-    
+
     if  (tabcloser = true) and  (info.eventkind = ek_buttonrelease) and (tabs.count > 1) then
       begin
-    
+
        w1 := 0;
        w2 := 0;
-       i := flayoutinfo.firsttab ; 
-       
+       i := flayoutinfo.firsttab ;
+
       // writeln('flayoutinfo.firsttab = ' + inttostr(i));
-               
+
        while (i < tabs.count) and (found = false)  do
        begin
-       
+
          tabs.flabel.font.width := tabs[i].font.width;
-         tabs.flabel.font.height := tabs[i].font.height; 
+         tabs.flabel.font.height := tabs[i].font.height;
          tabs.flabel.caption := tabs[i].caption;
-      
+
          w2 := w2 + tabs.flabel.width + 20;
-      
+
          w1 := w2 + 1;
          inc(i);
-      
+
         end;
      end else
         checkbuttonhint(self,info,fhintedbutton,cells,
@@ -5197,7 +5203,11 @@ begin
   fpopuptab:= ftabs.tabatpos(translateclientpoint(mouseinfo.pos,self,ftabs));
   if fpopuptab >= 0 then begin
    tpopupmenu.additems(amenu,self,mouseinfo,
+{$ifdef mse_dynpo}
       [lang_stockcaption[ord(sc_close_page)]],
+{$else}
+      [sc(sc_close_page)],
+{$endif}
       [],[],[{$ifdef FPC}@{$endif}doclosepage]);
   end;
  end;

@@ -9,8 +9,8 @@ uses
  msetypes,mseglob,mseguiglob,mseguiintf,mseapplication,msestat,msemenus,msegui,
  msegraphics,msegraphutils,mseevent,mseclasses,msewidgets,mseforms,mseact,
  mclasses,msedataedits,msedropdownlist,mseedit,mseificomp,mseificompglob,
- msestockobjects,mseifiglob,msememodialog,msestatfile,msestream,SysUtils,
- msesimplewidgets,mseconsts,msefileutils,msebitmap,msedatanodes,msedragglob,
+ msestockobjects_dynpo,mseifiglob,msememodialog,msestatfile,msestream,SysUtils,
+ msesimplewidgets,mseconsts_dynpo,msefileutils,msebitmap,msedatanodes,msedragglob,
  msegrids,msegridsglob,LazUTF8,mselistbrowser,msesys,msegraphedits,msescrollbar,
  msetimer,msedispwidgets,mserichstring,msestringcontainer,msefiledialogx;
 

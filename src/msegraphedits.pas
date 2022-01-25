@@ -27,9 +27,15 @@ interface
 {$endif}
 
 uses
- classes,mclasses,msegui, 
+ classes,mclasses,msegui,
  mseglob,mseguiglob,msescrollbar,msegraphutils,msegraphics,mseevent,
- msewidgets,mseeditglob,msestockobjects,msestat,msestatfile,mseassistiveclient,
+ msewidgets,mseeditglob,
+{$ifdef mse_dynpo}
+ msestockobjects_dynpo,
+{$else}
+ msestockobjects,
+{$endif}
+ msestat,msestatfile,mseassistiveclient,
  mseclasses,msesimplewidgets,msemenus,mseact,typinfo,msedragglob,
  msegrids,msewidgetgrid,msedatalist,msebitmap,msetypes,msestrings,msearrayprops,
  msedrawtext,mseshapes
@@ -3262,10 +3268,19 @@ end;
 function tcustombooleanedit.getassistivetext(): msestring;
 begin
  if value then begin
+{$ifdef mse_dynpo}
   result:= lang_stockcaption[ord(sc_on)];
+{$else}
+  result:= sc(sc_on);
+{$endif}
+
  end
  else begin
+{$ifdef mse_dynpo}
   result:= lang_stockcaption[ord(sc_off)];
+{$else}
+  result:= sc(sc_off);
+{$endif}
  end;
 end;
 

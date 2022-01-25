@@ -22,11 +22,16 @@ interface
  {$endif}
 {$endif}
 uses
- mseconsts_ide,
+{$ifdef mse_dynpo}
+ msestockobjects_dynpo,
+ mseconsts_dynpo,
+{$else}
  msestockobjects,
+ mseconsts,
+{$endif}
  msestream,mseclasses,classes,mclasses,msetypes,mseevent,msehash,msepipestream,
  msestrings,mseapplication,msegui,msedatalist,msesystypes,mseprocess;
- 
+
 //todo: byte endianess for remote debugging
 
 type

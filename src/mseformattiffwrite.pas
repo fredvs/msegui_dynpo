@@ -13,10 +13,10 @@ interface
 const
  tifflabel = 'tif';
 procedure registerformat;
- 
+
 implementation
 uses
- classes,mclasses,msegraphics,msebitmap,msefpwritetiff,msegraphicstream,msestockobjects,
+ classes,mclasses,msegraphics,msebitmap,msefpwritetiff,msegraphicstream,
  msefpimage;
 
 //
@@ -40,7 +40,7 @@ begin
   ima.free;
  end;
 end;
-  
+
 procedure registerformat;
 begin
  registergraphicformat(tifflabel,nil,{$ifdef FPC}@{$endif}writegraphic,

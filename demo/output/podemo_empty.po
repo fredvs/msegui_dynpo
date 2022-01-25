@@ -18,542 +18,542 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 msgid "&Cancel"
-msgstr ""
+msgstr "&Cancel"
 
 msgid "&Abort"
-msgstr ""
+msgstr "&Abort"
 
 msgid "&OK"
-msgstr ""
+msgstr "&OK"
 
 msgid "&Yes"
-msgstr ""
+msgstr "&Yes"
 
 msgid "&No"
-msgstr ""
+msgstr "&No"
 
 msgid "&All"
-msgstr ""
+msgstr "&All"
 
 msgid "Yes &all"
-msgstr ""
+msgstr "Yes &all"
 
 msgid "N&o all"
-msgstr ""
+msgstr "N&o all"
 
 msgid "&Ignore"
-msgstr ""
+msgstr "&Ignore"
 
 msgid "&Skip"
-msgstr ""
+msgstr "&Skip"
 
 msgid "Skip a&ll"
-msgstr ""
+msgstr "Skip a&ll"
 
 msgid "Co&ntinue"
-msgstr ""
+msgstr "Co&ntinue"
 
 msgid "Cancel"
-msgstr ""
+msgstr "Cancel"
 
 msgid "Abort"
-msgstr ""
+msgstr "Abort"
 
 msgid "OK"
-msgstr ""
+msgstr "OK"
 
 msgid "Yes"
-msgstr ""
+msgstr "Yes"
 
 msgid "No"
-msgstr ""
+msgstr "No"
 
 msgid "All"
-msgstr ""
+msgstr "All"
 
 msgid "Yes all"
-msgstr ""
+msgstr "Yes all"
 
 msgid "No all"
-msgstr ""
+msgstr "No all"
 
 msgid "Ignore"
-msgstr ""
+msgstr "Ignore"
 
 msgid "Skip"
-msgstr ""
+msgstr "Skip"
 
 msgid "Skip all"
-msgstr ""
+msgstr "Skip all"
 
 msgid "Continue"
-msgstr ""
+msgstr "Continue"
 
 msgid "is invalid"
-msgstr ""
+msgstr "is invalid"
 
 msgid "Format error"
-msgstr ""
+msgstr "Format error"
 
 msgid "Value is required"
-msgstr ""
+msgstr "Value is required"
 
 msgid "Error"
-msgstr ""
+msgstr "Error"
 
 msgid "Min"
-msgstr ""
+msgstr "Min"
 
 msgid "Max"
-msgstr ""
+msgstr "Max"
 
 msgid "Range error"
-msgstr ""
+msgstr "Range error"
 
 msgid "&Undo"
-msgstr ""
+msgstr "&Undo"
 
 msgid "&Redo"
-msgstr ""
+msgstr "&Redo"
 
 msgid "&Copy"
-msgstr ""
+msgstr "&Copy"
 
 msgid "Cu&t"
-msgstr ""
+msgstr "Cu&t"
 
 msgid "&Paste"
-msgstr ""
+msgstr "&Paste"
 
 msgid "Select &all"
-msgstr ""
+msgstr "Select &all"
 
 msgid "&Insert Row"
-msgstr ""
+msgstr "&Insert Row"
 
 msgid "&Append Row"
-msgstr ""
+msgstr "&Append Row"
 
 msgid "&Delete Row"
-msgstr ""
+msgstr "&Delete Row"
 
 msgid "&Dir"
-msgstr ""
+msgstr "&Dir"
 
 msgid "&Home"
-msgstr ""
+msgstr "&Home"
 
 msgid "&Up"
-msgstr ""
+msgstr "&Up"
 
 msgid "&New"
-msgstr ""
+msgstr "&New"
 
 msgid "&Name"
-msgstr ""
+msgstr "&Name"
 
 msgid "&Show hidden files"
-msgstr ""
+msgstr "&Show hidden files"
 
 msgid "&Filter"
-msgstr ""
+msgstr "&Filter"
 
 msgid "Save"
-msgstr ""
+msgstr "Save"
 
 msgid "Open"
-msgstr ""
+msgstr "Open"
 
 msgid "Name"
-msgstr ""
+msgstr "Name"
 
 msgid "Create new directory"
-msgstr ""
+msgstr "Create new directory"
 
 msgid "Back"
-msgstr ""
+msgstr "Back"
 
 msgid "Forward"
-msgstr ""
+msgstr "Forward"
 
 msgid "Up"
-msgstr ""
+msgstr "Up"
 
 msgid "exists, do you want to overwrite?"
-msgstr ""
+msgstr "exists, do you want to overwrite?"
 
 msgid "is modified. Save?"
-msgstr ""
+msgstr "is modified. Save?"
 
 msgid "WARNING"
-msgstr ""
+msgstr "WARNING"
 
 msgid "Exception"
-msgstr ""
+msgstr "Exception"
 
 msgid "System"
-msgstr ""
+msgstr "System"
 
 msgid "does not exist"
-msgstr ""
+msgstr "does not exist"
 
 msgid "PASSWORD"
-msgstr ""
+msgstr "PASSWORD"
 
 msgid "Enter password"
-msgstr ""
+msgstr "Enter password"
 
 msgid "Invalid password!"
-msgstr ""
+msgstr "Invalid password!"
 
 msgid "Can not read directory"
-msgstr ""
+msgstr "Can not read directory"
 
 msgid "Graphic format not supported"
-msgstr ""
+msgstr "Graphic format not supported"
 
 msgid "Graphic format error"
-msgstr ""
+msgstr "Graphic format error"
 
 msgid "All Images"
-msgstr ""
+msgstr "All Images"
 
 msgid "Confirmation"
-msgstr ""
+msgstr "Confirmation"
 
 msgid "Delete record?"
-msgstr ""
+msgstr "Delete record?"
 
 msgid "Copy record?"
-msgstr ""
+msgstr "Copy record?"
 
 msgid "Close page"
-msgstr ""
+msgstr "Close page"
 
 msgid "First"
-msgstr ""
+msgstr "First"
 
 msgid "Prior"
-msgstr ""
+msgstr "Prior"
 
 msgid "Next"
-msgstr ""
+msgstr "Next"
 
 msgid "Last"
-msgstr ""
+msgstr "Last"
 
 msgid "Append"
-msgstr ""
+msgstr "Append"
 
 msgid "Delete"
-msgstr ""
+msgstr "Delete"
 
 msgid "Edit"
-msgstr ""
+msgstr "Edit"
 
 msgid "Post"
-msgstr ""
+msgstr "Post"
 
 msgid "Annul"
-msgstr ""
+msgstr "Annul"
 
 msgid "Refresh"
-msgstr ""
+msgstr "Refresh"
 
 msgid "Edit filter"
-msgstr ""
+msgstr "Edit filter"
 
 msgid "Edit filter minimum"
-msgstr ""
+msgstr "Edit filter minimum"
 
 msgid "Edit filter maximum"
-msgstr ""
+msgstr "Edit filter maximum"
 
 msgid "Reset filter"
-msgstr ""
+msgstr "Reset filter"
 
 msgid "Filter on"
-msgstr ""
+msgstr "Filter on"
 
 msgid "Search"
-msgstr ""
+msgstr "Search"
 
 msgid "Auto edit"
-msgstr ""
+msgstr "Auto edit"
 
 msgid "Copy record"
-msgstr ""
+msgstr "Copy record"
 
 msgid "Dialog"
-msgstr ""
+msgstr "Dialog"
 
 msgid "Insert"
-msgstr ""
+msgstr "Insert"
 
 msgid "Copy"
-msgstr ""
+msgstr "Copy"
 
 msgid "Paste"
-msgstr ""
+msgstr "Paste"
 
 msgid "Row insert"
-msgstr ""
+msgstr "Row insert"
 
 msgid "Row append"
-msgstr ""
+msgstr "Row append"
 
 msgid "Row delete"
-msgstr ""
+msgstr "Row delete"
 
 msgid "Undo"
-msgstr ""
+msgstr "Undo"
 
 msgid "Redo"
-msgstr ""
+msgstr "Redo"
 
 msgid "Cut"
-msgstr ""
+msgstr "Cut"
 
 msgid "Select all"
-msgstr ""
+msgstr "Select all"
 
 msgid "Filter off"
-msgstr ""
+msgstr "Filter off"
 
 msgid "Portrait"
-msgstr ""
+msgstr "Portrait"
 
 msgid "Landscape"
-msgstr ""
+msgstr "Landscape"
 
 msgid "Delete row?"
-msgstr ""
+msgstr "Delete row?"
 
 msgid "selected rows?"
-msgstr ""
+msgstr "selected rows?"
 
 msgid "Single item only"
-msgstr ""
+msgstr "Single item only"
 
 msgid "Copy Cells"
-msgstr ""
+msgstr "Copy Cells"
 
 msgid "Paste Cells"
-msgstr ""
+msgstr "Paste Cells"
 
 msgid "Close"
-msgstr ""
+msgstr "Close"
 
 msgid "Maximize"
-msgstr ""
+msgstr "Maximize"
 
 msgid "Normalize"
-msgstr ""
+msgstr "Normalize"
 
 msgid "Minimize"
-msgstr ""
+msgstr "Minimize"
 
 msgid "Fix size"
-msgstr ""
+msgstr "Fix size"
 
 msgid "Float"
-msgstr ""
+msgstr "Float"
 
 msgid "Stay on top"
-msgstr ""
+msgstr "Stay on top"
 
 msgid "Stay in background"
-msgstr ""
+msgstr "Stay in background"
 
 msgid "Lock children"
-msgstr ""
+msgstr "Lock children"
 
 msgid "No lock"
-msgstr ""
+msgstr "No lock"
 
 msgid "Input"
-msgstr ""
+msgstr "Input"
 
 msgid "Button"
-msgstr ""
+msgstr "Button"
 
 msgid "On"
-msgstr ""
+msgstr "On"
 
 msgid "Off"
-msgstr ""
+msgstr "Off"
 
 msgid "Left border"
-msgstr ""
+msgstr "Left border"
 
 msgid "Top border"
-msgstr ""
+msgstr "Top border"
 
 msgid "Right border"
-msgstr ""
+msgstr "Right border"
 
 msgid "Bottom border"
-msgstr ""
+msgstr "Bottom border"
 
 msgid "Begin of text"
-msgstr ""
+msgstr "Begin of text"
 
 msgid "End of text"
-msgstr ""
+msgstr "End of text"
 
 msgid "Inputmode"
-msgstr ""
+msgstr "Inputmode"
 
 msgid "Overwrite"
-msgstr ""
+msgstr "Overwrite"
 
 msgid "Deleted"
-msgstr ""
+msgstr "Deleted"
 
 msgid "Copied"
-msgstr ""
+msgstr "Copied"
 
 msgid "Inserted"
-msgstr ""
+msgstr "Inserted"
 
 msgid "Pasted"
-msgstr ""
+msgstr "Pasted"
 
 msgid "Withdrawn"
-msgstr ""
+msgstr "Withdrawn"
 
 msgid "Window activated"
-msgstr ""
+msgstr "Window activated"
 
 msgid "Menu"
-msgstr ""
+msgstr "Menu"
 
 msgid "Beginning of file"
-msgstr ""
+msgstr "Beginning of file"
 
 msgid "End of file"
-msgstr ""
+msgstr "End of file"
 
 msgid "Voice output"
-msgstr ""
+msgstr "Voice output"
 
 msgid "Speak again"
-msgstr ""
+msgstr "Speak again"
 
 msgid "First column"
-msgstr ""
+msgstr "First column"
 
 msgid "First row"
-msgstr ""
+msgstr "First row"
 
 msgid "Last column"
-msgstr ""
+msgstr "Last column"
 
 msgid "Last row"
-msgstr ""
+msgstr "Last row"
 
 msgid "Selection"
-msgstr ""
+msgstr "Selection"
 
 msgid "Speak path"
-msgstr ""
+msgstr "Speak path"
 
 msgid "Disabled button"
-msgstr ""
+msgstr "Disabled button"
 
 msgid "First field"
-msgstr ""
+msgstr "First field"
 
 msgid "Last field"
-msgstr ""
+msgstr "Last field"
 
 msgid "First element"
-msgstr ""
+msgstr "First element"
 
 msgid "Last element"
-msgstr ""
+msgstr "Last element"
 
 msgid "Slower"
-msgstr ""
+msgstr "Slower"
 
 msgid "Faster"
-msgstr ""
+msgstr "Faster"
 
 msgid "Window"
-msgstr ""
+msgstr "Window"
 
 msgid "Area"
-msgstr ""
+msgstr "Area"
 
 msgid "Area activated"
-msgstr ""
+msgstr "Area activated"
 
 msgid "Volume down"
-msgstr ""
+msgstr "Volume down"
 
 msgid "Volume up"
-msgstr ""
+msgstr "Volume up"
 
 msgid "Cancel speech"
-msgstr ""
+msgstr "Cancel speech"
 
 msgid "New"
-msgstr ""
+msgstr "New"
 
 msgid "Tools"
-msgstr ""
+msgstr "Tools"
 
 msgid "Languages"
-msgstr ""
+msgstr "Languages"
 
 msgid "Directory"
-msgstr ""
+msgstr "Directory"
 
 msgid "No icons"
-msgstr ""
+msgstr "No icons"
 
 msgid "No lateral"
-msgstr ""
+msgstr "No lateral"
 
 msgid "Compact"
-msgstr ""
+msgstr "Compact"
 
 msgid "Path"
-msgstr ""
+msgstr "Path"
 
 msgid "File"
-msgstr ""
+msgstr "File"
 
 msgid "Delete selected row?"
-msgstr ""
+msgstr "Delete selected row?"
 
 msgid "Delete %s selected rows?"
-msgstr ""
+msgstr "Delete %s selected rows?"
 
 msgid "This is a test of internationalization."
-msgstr ""
+msgstr "This is a test of internationalization."
 
 msgid "That is a other test."
-msgstr ""
+msgstr "That is a other test."
 
 msgid "This is the end."
-msgstr ""
+msgstr "This is the end."
 
 msgid "English [en]"
-msgstr ""
+msgstr "English [en]"
 
 msgid "Russian [ru]"
-msgstr ""
+msgstr "Russian [ru]"
 
 msgid "French [fr]"
-msgstr ""
+msgstr "French [fr]"
 
 msgid "German [de]"
-msgstr ""
+msgstr "German [de]"
 
 msgid "Spanish [es]"
-msgstr ""
+msgstr "Spanish [es]"
 
 msgid "Portuguese [pt]"
-msgstr ""
+msgstr "Portuguese [pt]"
 

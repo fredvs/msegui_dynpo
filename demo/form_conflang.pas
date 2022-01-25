@@ -63,8 +63,10 @@ var
 implementation
 
 uses
-  po2arrays,
-  msestockobjects,
+{$ifdef mse_dynpo}
+ po2arrays,
+{$endif}
+  msestockobjects_dynpo,
   form_potools,
   form_conflang_mfm;
 
@@ -73,6 +75,7 @@ var
   x: shortint;
   str: string;
 begin
+{$ifdef mse_dynpo}
   createnewlang(thelang);
 
   conflangfo.gridlang.rowcount := length(lang_langnames);
@@ -97,7 +100,7 @@ begin
   conflangfo.tlabel2.Caption := lang_mainform[Ord(ma_test2)];
 
   conflangfo.tlabel3.Caption := lang_mainform[Ord(ma_test3)];
-
+{$endif}
   application.ProcessMessages;
 end;
 
@@ -109,14 +112,17 @@ end;
 
 procedure tconflangfo.oncreat(const Sender: TObject);
 begin
+{$ifdef mse_dynpo}
   setlangdemo(MSEFallbackLang);
+{$endif}
 end;
 
 procedure tconflangfo.oncellev(const Sender: TObject; var info: celleventinfoty);
 var
   x: integer;
 begin
-  if info.eventkind = cek_buttonrelease then
+{$ifdef mse_dynpo}
+   if info.eventkind = cek_buttonrelease then
   begin
     MSEFallbackLang := '';
     for x           := 0 to gridlang.rowcount - 1 do
@@ -129,11 +135,14 @@ begin
       else
         gridlangbool[x] := False;
   end;
+{$endif}
 end;
 
 procedure tconflangfo.ontools(const Sender: TObject);
 begin
-  headerfo.Visible := True;
+{$ifdef mse_dynpo}
+ headerfo.Visible := True;
+{$endif}
 end;
 
 end.

@@ -21,9 +21,9 @@ order18=0
 [projectoptions]
 projectdir=/home/fred/msegui_dynpo_clean/demo
 projectfilename=/home/fred/msegui_dynpo_clean/demo/podemo.prj
-findinfiledialog=43
+findinfiledialog=52
  [findinfileadialogfo.subdirs]
- value=0
+ value=1
  [findinfileadialogfo.incurrentfile]
  value=0
  [findinfileadialogfo.inopenfiles]
@@ -31,9 +31,9 @@ findinfiledialog=43
  [findinfileadialogfo.wholeword]
  value=0
  [findinfileadialogfo.indirectories]
- value=0
- [findinfileadialogfo.inprojectdir]
  value=1
+ [findinfileadialogfo.inprojectdir]
+ value=0
  [findinfileadialogfo.casesensitive]
  value=0
  [findinfileadialogfo.mask]
@@ -42,18 +42,27 @@ findinfiledialog=43
   "*.pas" "*.pp" "*.inc"
  [findinfileadialogfo.dir]
  filenames=1
-  /home/fred/msegui_dynpo/src/
- filecolwidth=0
+  /home/fred/mseide-msegui/
+ filecolwidth=174
  x=0
  y=0
  cx=0
  cy=0
- filehistory=0
+ filehistory=1
+  /home/fred/mseide-msegui/
  filefilterindex=0
- filefilter=
+ filefilter="*.pas" "*.pp" "*.inc"
  [findinfileadialogfo.findtext]
- value=lang_
- history=5
+ value=modalresulttext
+ history=13
+  modalresulttext
+  msescrollbar
+  regunitgroups
+  msestockobjects
+  getglyphs
+  defaultsplittergrip
+  mseconsts
+  {$else}
   lang_
   demo
   conflang
@@ -70,8 +79,8 @@ finddialog=8
  value=0
  [finddialogfo]
  stackedunder=
- x=768
- y=494
+ x=912
+ y=270
  cx=234
  cy=269
 options=114
@@ -213,13 +222,15 @@ objpref=-Fo
 targpref=-o
 befcommand=0
 aftcommand=0
-makeoptions=5
+makeoptions=6
  -l -Mobjfpc -Sh -Fcutf8
  -gl -O-
  -B
  -FUunits
+ -dmse_dynpo
  -O2 -XX -CX -Xs
-makeoptpurpose=5
+makeoptpurpose=6
+ 
  
  
  
@@ -434,20 +445,15 @@ settingsstorage=0
 settingsprojecttree=0
 settingsautoload=0
 settingsautosave=0
-modulenames=2
- CONFLANGFO
- HEADERFO
-moduletypes=2
- TCONFLANGFO
- THEADERFO
-modulefiles=2
- /home/fred/msegui_dynpo_clean/demo/form_conflang.mfm
- /home/fred/msegui_dynpo_clean/demo/form_potools.mfm
+modulenames=0
+moduletypes=0
+modulefiles=0
 befcommandon=0
-makeoptionson=5
+makeoptionson=6
  4095
  4095
  4063
+ 4095
  4095
  60
 compilerusedon=29
@@ -740,98 +746,47 @@ envvarons=0
 [edit]
 hintwidth=0
 hintheight=0
-finddtext=demo
-findhistory=19
+finddtext=sc_directory
+findhistory=20
+ sc_directory
+ ok.ca
+ lang_
+ if fdo_save in aoptions then
+ modalresulttext
+ mseconst
+ uses
+ ok.caption:=
+ syncshowmessage
+ dodeleteselectedrows
+ ex_del_row_selected
+ msestocko
+ msest
+ stocko
  demo
  writeln(
  '2'
  sc_cancelspeech
  sc_path
- sc_directory
  stat
- 'file
- 'filename
- dosearch
- langnamestmp
- tmp
- temp
- lang_
- demo_empty
- demoall
- ideu
- ieu
- writeln
 findoptions=1
-editpos=8
- 0,-1073741823
- 0,216
- 0,-1073741823
- 0,252
- 0,0
- 0,7
- 0,-1073741823
+editpos=1
  0,0
 bookmarks0=0
-bookmarks1=0
-bookmarks2=0
-bookmarks3=0
-bookmarks4=0
-bookmarks5=0
-bookmarks6=0
-bookmarks7=0
-sourcefiles=8
+sourcefiles=1
  ${PROJECTDIR}/podemo.pas
- ${PROJECTDIR}/form_potools.pas
- ${PROJECTDIR}/po2arrays.pas
- ${PROJECTDIR}/mseconsts.pas
- ${PROJECTDIR}/msestockobjects.pas
- ${PROJECTDIR}/form_conflang.pas
- ${PROJECTDIR}/${PROJECTDIR}/potools.pas
- ${PROJECTDIR}/mseactions.pas
-relpaths=8
+relpaths=1
  podemo.pas
- form_potools.pas
- po2arrays.pas
- mseconsts.pas
- msestockobjects.pas
- form_conflang.pas
- ${PROJECTDIR}/potools.pas
- mseactions.pas
-ismoduletexts=8
+ismoduletexts=1
  0
- 0
- 0
- 0
- 0
- 0
- 0
- 0
-modules=2
- /home/fred/msegui_dynpo_clean/demo/form_conflang.mfm
- /home/fred/msegui_dynpo_clean/demo/form_potools.mfm
-moduleoptions=2
- 0
- 0
-visiblemodules=2
- -1
- -1
-nomenumodules=2
- 0
- 0
+modules=0
+moduleoptions=0
+visiblemodules=0
+nomenumodules=0
 [sourcefo.files_tab]
-order=8
- 0
- 1
- 7
- 2
- 3
- 4
- 6
- 5
 firsttab=0
-index=1
+index=0
 [layout]
-windowlayout=569
+windowlayout=521
  [mainfo.basedock]
  splitdir=2
  useroptions=268450944
@@ -845,8 +800,8 @@ windowlayout=569
  ny=0
  ncx=0
  ncy=0
- x=46
- y=109
+ x=98
+ y=40
  cx=1224
  cy=621
  rcx=0
@@ -855,8 +810,9 @@ windowlayout=569
  active=1
  visible=1
  [findmessagefo.findtext]
- value=
- history=0
+ value=msescroll
+ history=1
+  msescroll
  [findmessagefo.casesensitive]
  value=0
  [findmessagefo.copytoclip]
@@ -870,15 +826,15 @@ windowlayout=569
  ny=0
  ncx=0
  ncy=0
- x=780
- y=449
+ x=493
+ y=171
  cx=497
  cy=314
  rcx=0
  rcy=0
  wsize=0
  active=0
- visible=1
+ visible=0
  [threadsfo]
  splitdir=0
  useroptions=268451945
@@ -890,13 +846,13 @@ windowlayout=569
  ncy=0
  x=444
  y=431
- cx=652
+ cx=418
  cy=126
  rcx=0
  rcy=0
  wsize=0
  active=0
- visible=1
+ visible=0
  [memoryfo]
  splitdir=0
  useroptions=268451963
@@ -953,9 +909,9 @@ windowlayout=569
  ny=0
  ncx=0
  ncy=0
- x=239
- y=115
- cx=678
+ x=238
+ y=116
+ cx=936
  cy=414
  rcx=0
  rcy=0
@@ -972,7 +928,7 @@ windowlayout=569
  x=0
  y=0
  cx=205
- cy=526
+ cy=476
  rcx=0
  rcy=0
  [projecttreefo.grid]
@@ -1062,10 +1018,10 @@ windowlayout=569
  [breakpointsfo.bkptson]
  value=1
  [objectinspectorfo.grid]
- propcolwidthref=341
- width0=152
+ propcolwidthref=242
+ width0=107
  sortdescend0=0
- width1=183
+ width1=129
  sortdescend1=0
  [symbolfo]
  splitdir=0
@@ -1088,25 +1044,7 @@ windowlayout=569
  visible=0
  [symbolfo.grid]
  propcolwidthref=207
- values0=18
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+ values0=0
  width0=111
  sortdescend0=0
  width1=125
@@ -1158,9 +1096,9 @@ windowlayout=569
  ncx=0
  ncy=0
  x=0
- y=582
+ y=541
  cx=1356
- cy=108
+ cy=149
  rcx=0
  rcy=0
  [componentstorefo]
@@ -1260,7 +1198,7 @@ windowlayout=569
  x=0
  y=0
  cx=1356
- cy=50
+ cy=59
  rcx=0
  rcy=0
  [debuggerfo.basedock]
@@ -1271,12 +1209,12 @@ windowlayout=569
  mdistate=0
  nx=0
  ny=0
- ncx=1341
- ncy=43
+ ncx=1356
+ ncy=62
  x=0
  y=0
  cx=1356
- cy=41
+ cy=62
  rcx=0
  rcy=0
  [debuggerfo.edit_options]
@@ -1286,11 +1224,27 @@ windowlayout=569
  [debuggerfo.edit_compiler]
  value=Pascal
  [debuggerfo.file_history]
- value=/home/fred/msegui_dynpo_clean/demo/form_potools.pas
- history=3
-  /home/fred/msegui_dynpo/demo/form_conflang.pas
-  /home/fred/msegui_dynpo/demo/mseactions.pas
-  /home/fred/msegui_dynpo/demo/form_potools.pas
+ value=/home/fred/msegui_dynpo_clean/demo/msestockobjects_dynpo.mfm
+ history=19
+  /home/fred/msegui_dynpo_clean/demo/msestockobjects_dynpo.mfm
+  /home/fred/msegui_dynpo_clean/demo/mseconsts_dynpo.pas
+  /home/fred/msegui_dynpo_clean/demo/msestockobjects.pas
+  /home/fred/msegui_dynpo_clean/demo/mseconsts.pas
+  /home/fred/msegui_dynpo_clean/demo/msefiledialog.pas
+  /home/fred/msegui_dynpo_clean/demo/msestockobjects_dynpo.pas
+  /home/fred/mseide-msegui/lib/common/dialogs/msefiledialog.pas
+  /home/fred/mseide-msegui/lib/common/widgets/msewidgets.pas
+  /home/fred/mseide-msegui/lib/common/widgets/msegrids.pas
+  /home/fred/msegui_dynpo_clean/demo/msescrollbar.pas
+  /home/fred/msegui_dynpo_clean/demo/podemo.pas
+  /home/fred/mseide-msegui/lib/common/graphics/msedrawtext.pas
+  /home/fred/mseide-msegui/lib/common/graphics/msegdi32gdi.pas
+  /home/fred/msegui_dynpo_clean/demo/msewidgets.pas
+  /home/fred/mseide-msegui/lib/common/graphics/msefont.pas
+  /home/fred/mseide-msegui/lib/common/kernel/mseconsts.pas
+  /home/fred/msegui_dynpo/demo/regunitgroups.pas
+  /home/fred/msegui_dynpo_clean/demo/msedialog.pas
+  /home/fred/msegui_dynpo_clean/demo/mseedit.pas
  [debuggerfo.project_options]
  value=1
  [debuggerfo.hints]
@@ -1308,21 +1262,12 @@ windowlayout=569
  x=208
  y=0
  cx=1148
- cy=526
+ cy=476
  rcx=0
  rcy=0
  [sourcefo.files_tab]
- order=8
-  0
-  1
-  7
-  2
-  3
-  4
-  6
-  5
  firsttab=0
- index=1
+ index=0
  [confideufo.fontname]
  value=stf_default
  [confideufo.usedefaulteditoroptions]
@@ -1358,49 +1303,11 @@ windowlayout=569
  ncx=0
  ncy=0
  x=0
- y=53
+ y=62
  cx=1356
- cy=526
+ cy=476
  rcx=0
  rcy=0
- [_mse_conflangfo_mse_]
- splitdir=0
- useroptions=268451963
- stackedunder=objectinspectorfo
- parent=
- mdistate=3
- nx=0
- ny=0
- ncx=0
- ncy=0
- x=444
- y=269
- cx=341
- cy=262
- rcx=0
- rcy=0
- wsize=0
- active=0
- visible=1
- [_mse_headerfo_mse_]
- splitdir=0
- useroptions=268451963
- stackedunder=targetconsolefo
- parent=
- mdistate=3
- nx=0
- ny=0
- ncx=0
- ncy=0
- x=495
- y=202
- cx=456
- cy=415
- rcx=0
- rcy=0
- wsize=0
- active=0
- visible=1
 [targetconsole]
 finddtext=
 findhistory=0

@@ -22,7 +22,13 @@ interface
 {$endif}
 uses
  msewidgets,classes,mclasses,msedrag,msegui,msegraphutils,mseevent,mseclasses,
- msegraphics,msestockobjects,mseglob,mseguiglob,msestat,msestatfile,msepointer,
+ msegraphics,
+{$ifdef mse_dynpo}
+ msestockobjects_dynpo,
+{$else}
+ msestockobjects,
+{$endif}
+ mseglob,mseguiglob,msestat,msestatfile,msepointer,
  msesplitter,msesimplewidgets,msetypes,msestrings,msebitmap,mseobjectpicker,
  msetabsglob,msemenus,msedrawtext,mseshapes,msedragglob,mseinterfaces,msetabs;
 
@@ -736,7 +742,7 @@ procedure paintdockingareacaption(const canvas: tcanvas; const sender: twidget;
 implementation
 uses
  msearrayutils,sysutils,msebits,{msetabs,}mseguiintf,{mseforms,}msestream,
- 
+
  mseformatstr,msekeyboard;
 {$ifndef mse_allwarnings}
  {$if fpc_fullversion >= 030100}
@@ -4634,6 +4640,7 @@ begin
     info.caption:= fgrip_hint;
    end;
   end;
+{$ifdef mse_dynpo}
   dbr_close: begin
    info.caption:= lang_stockcaption[ord(sc_close)];
   end;
@@ -4663,6 +4670,38 @@ begin
   end;
   dbr_nolock: begin
    info.caption:= lang_stockcaption[ord(sc_no_lock)];
+{$else}
+  dbr_close: begin
+   info.caption:= sc(sc_close);
+  end;
+  dbr_maximize: begin
+   info.caption:= sc(sc_maximize);
+  end;
+  dbr_normalize: begin
+   info.caption:= sc(sc_normalize);
+  end;
+  dbr_minimize: begin
+   info.caption:= sc(sc_minimize);
+  end;
+  dbr_fixsize: begin
+   info.caption:= sc(sc_fix_size);
+  end;
+  dbr_float: begin
+   info.caption:= sc(sc_float);
+  end;
+  dbr_top: begin
+   info.caption:= sc(sc_stay_on_top);
+  end;
+  dbr_background: begin
+   info.caption:= sc(sc_stay_in_background);
+  end;
+  dbr_lock: begin
+   info.caption:= sc(sc_lock_children);
+  end;
+  dbr_nolock: begin
+   info.caption:= sc(sc_no_lock);
+{$endif}
+
   end;
   else; // Added to make compiler happy
  end;

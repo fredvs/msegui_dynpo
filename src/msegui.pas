@@ -26,17 +26,13 @@ interface
  {$endif}
 {$endif}
 uses
- classes,mclasses,sysutils,msegraphics,msetypes,mseact, 
+ classes,mclasses,sysutils,msegraphics,msetypes,mseact,
  msestrings,mseerr,msegraphutils,mseapplication,msedragglob,
  msepointer,mseevent,msekeyboard,mseclasses,mseglob,mseguiglob,mselist,
  msesystypes,msethread,mseguiintf,{msesysdnd,}mseassistiveclient,
  msebitmap,msearrayprops,msethreadcomp,mserichstring,msearrayutils
                    {$ifdef mse_with_ifi},mseifiglob,mseificompglob{$endif};
- var                  
- MSEFallbacklang: string = '';      
- MSELang: string = '';              
-
-const
+ const
  mseguiversiontext = '5.6.4';
  copyrighttext = 'Copyright 1999-2022';
  defaultwidgetcolor = cl_default;
@@ -58,8 +54,11 @@ const
  hintidwidget = -1;
  hintidframe = -100;
 
-type
+var
+ MSEFallbacklang: string = '';
+ MSELang: string = '';
 
+type
  gdiregionty = record
   gdi: pgdifunctionaty;
   region: regionty;
@@ -3321,8 +3320,14 @@ function debugwidgetname(const awidget: twidget; const atext: string): string;
 
 implementation
 uses
- msesysintf,typinfo,msestreaming,msetimer,msebits,msewidgets, 
- mseshapes,msestockobjects,msefileutils,msedatalist,Math,msesysutils,
+ msesysintf,typinfo,msestreaming,msetimer,msebits,msewidgets,
+ mseshapes,
+{$ifdef mse_dynpo}
+ msestockobjects_dynpo,
+{$else}
+ msestockobjects,
+{$endif}
+ msefileutils,msedatalist,Math,msesysutils,
  rtlconsts,{$ifndef FPC}classes_del,{$endif}mseformatstr,
  mseprocutils,msesys,msesysdnd,mseassistiveserver;
 {$ifndef mse_allwarnings}
@@ -21090,7 +21095,12 @@ begin
   end
   else begin
    mstr1:= leadingtext + e.Message;
-   showmessage(mstr1,lang_stockcaption[ord(sc_exception)]{$ifdef FPC},0,lineend+
+{$ifdef mse_dynpo}
+   showmessage(mstr1,lang_stockcaption[ord(sc_exception)]
+{$else}
+   showmessage(mstr1,sc(sc_exception)
+{$endif}
+  {$ifdef FPC},0,lineend+
                getexceptiontext(exceptobject,
                              exceptaddr,exceptframecount,exceptframes){$endif});
   end;

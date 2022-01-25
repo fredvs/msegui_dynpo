@@ -26,7 +26,7 @@ interface
  {$endif}
 {$endif}
 uses
- classes,mclasses,sysutils,mseclasses,msegui,msedragglob, 
+ classes,mclasses,sysutils,mseclasses,msegui,msedragglob,
  msegraphics,msetypes,msestrings,msegraphutils,msebitmap,mseassistiveclient,
  msescrollbar,msearrayprops,mseglob,mseguiglob,typinfo,msearrayutils,
  msedatalist,msedrawtext,msewidgets,mseevent,mseinplaceedit,mseeditglob,
@@ -2880,7 +2880,13 @@ var
 
 implementation
 uses
- mseguiintf,msestockobjects,mseact,mseactions,rtlconsts,msegraphedits,
+ mseguiintf,
+{$ifdef mse_dynpo}
+ msestockobjects_dynpo,
+{$else}
+ msestockobjects,
+{$endif}
+ mseact,mseactions,rtlconsts,msegraphedits,
  mseassistiveserver,mseformatstr;
 {$ifndef mse_allwarnings}
  {$if fpc_fullversion >= 030100}
@@ -10775,10 +10781,20 @@ begin
    else begin
     state1:= [as_disabled];
    end;
-   tpopupmenu.additems(amenu,self,mouseinfo,[
+
+{$ifdef mse_dynpo}
+  tpopupmenu.additems(amenu,self,mouseinfo,[
          lang_stockcaption[ord(sc_copy_cells)]+sepchar+
        '('+encodeshortcutname(sysshortcuts[sho_copycells])+')'],
                   [],[state1],[{$ifdef FPC}@{$endif}docopycells],not bo1);
+{$else}
+   tpopupmenu.additems(amenu,self,mouseinfo,[
+         sc(sc_copy_cells)+sepchar+
+       '('+encodeshortcutname(sysshortcuts[sho_copycells])+')'],
+                  [],[state1],[{$ifdef FPC}@{$endif}docopycells],not bo1);
+{$endif}
+
+
    bo1:= true;
   end;
   if fdatacols.canpaste or canevent(tmethod(fonpasteselection)) then begin
@@ -10788,15 +10804,28 @@ begin
    else begin
     state1:= [];
    end;
+
+{$ifdef mse_dynpo}
    tpopupmenu.additems(amenu,self,mouseinfo,[
         lang_stockcaption[ord(sc_paste_cells)]+sepchar+
       '('+encodeshortcutname(sysshortcuts[sho_pastecells])+')'],
                  [],[state1],[{$ifdef FPC}@{$endif}dopastecells],not bo1);
+
+{$else}
+   tpopupmenu.additems(amenu,self,mouseinfo,[
+        sc(sc_paste_cells)+sepchar+
+      '('+encodeshortcutname(sysshortcuts[sho_pastecells])+')'],
+                 [],[state1],[{$ifdef FPC}@{$endif}dopastecells],not bo1);
+
+{$endif}
+
    bo1:= true;
   end;
 
   if og_rowinserting in foptionsgrid then begin
-   tpopupmenu.additems(amenu,self,mouseinfo,[
+
+   {$ifdef mse_dynpo}
+  tpopupmenu.additems(amenu,self,mouseinfo,[
               lang_stockcaption[ord(sc_insert_rowhk)]+sepchar+
          '('+encodeshortcutname(sysshortcuts[sho_rowinsert])+')'],[],
          menustates(caninsertrow),
@@ -10806,7 +10835,23 @@ begin
               lang_stockcaption[ord(sc_append_rowhk)]+sepchar+
        '('+encodeshortcutname(sysshortcuts[sho_rowappend])+')'],[],
             menustates(canappendrow),[{$ifdef FPC}@{$endif}doappendrow],not bo1);
+{$else}
+  tpopupmenu.additems(amenu,self,mouseinfo,[
+              sc(sc_insert_rowhk)+sepchar+
+         '('+encodeshortcutname(sysshortcuts[sho_rowinsert])+')'],[],
+         menustates(caninsertrow),
+        [{$ifdef FPC}@{$endif}doinsertrow],not bo1);
    bo1:= true;
+   tpopupmenu.additems(amenu,self,mouseinfo,[
+              sc(sc_append_rowhk)+sepchar+
+       '('+encodeshortcutname(sysshortcuts[sho_rowappend])+')'],[],
+            menustates(canappendrow),[{$ifdef FPC}@{$endif}doappendrow],not bo1);
+{$endif}
+
+
+   bo1:= true;
+
+
   end;
   if og_rowdeleting in foptionsgrid then begin
    if (ffocusedcell.row >= 0) and candeleterow then begin
@@ -10815,10 +10860,21 @@ begin
    else begin
     state1:= [as_disabled];
    end;
+
+{$ifdef mse_dynpo}
    tpopupmenu.additems(amenu,self,mouseinfo,[
          lang_stockcaption[ord(sc_delete_rowhk)]+sepchar+
        '('+encodeshortcutname(sysshortcuts[sho_rowdelete])+')'],
                   [[mao_nocandefocus]],[state1],[{$ifdef FPC}@{$endif}dodeleterows],not bo1);
+
+{$else}
+   tpopupmenu.additems(amenu,self,mouseinfo,[
+         sc(sc_delete_rowhk)+sepchar+
+       '('+encodeshortcutname(sysshortcuts[sho_rowdelete])+')'],
+                  [[mao_nocandefocus]],[state1],[{$ifdef FPC}@{$endif}dodeleterows],not bo1);
+
+{$endif}
+
    bo1:= true;
   end;
  end;
@@ -16419,8 +16475,13 @@ begin
 if noconfirmdelete then result := true
 else
 begin
+{$ifdef mse_dynpo}
  result:= (og1_norowdeletequery in foptionsgrid1) or
     askok(lang_stockcaption[ord(sc_Delete_row_question)],lang_stockcaption[ord(sc_Confirmation)]);
+{$else}
+ result:= (og1_norowdeletequery in foptionsgrid1) or
+    askok(sc(sc_Delete_row_question),sc(sc_Confirmation));
+{$endif}
 end;
 end;
 
@@ -16439,15 +16500,21 @@ var
 begin
  ar1:= fdatacols.getselectedrows;
  if high(ar1) >= 0 then begin
- 
- if high(ar1) = 0 then
+
+  {$ifdef mse_dynpo}
+if high(ar1) = 0 then
     str := lang_extended[ord(ex_del_row_selected)]
   else str := StringReplace(lang_extended[ord(ex_del_rows_selected)], #37#115,
     inttostrmse(length(ar1)), [rfReplaceAll]);
-  
-  if askok(str,lang_stockcaption[ord(sc_Confirmation)]) 
-                            
- then begin
+
+  if askok(str,lang_stockcaption[ord(sc_Confirmation)])
+
+{$else}
+ if askok(stockobjects.textgenerators[tg_delete_n_selected_rows](
+                                       [integer(length(ar1))]),
+                            stockobjects.captions[sc_Confirmation])
+{$endif}
+  then begin
    beginupdate;
    try
     for int1:= high(ar1) downto 0 do begin

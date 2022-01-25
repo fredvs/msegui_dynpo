@@ -13,19 +13,18 @@ interface
 const
  xpmlabel = 'xpm';
 procedure registerformat;
- 
+
 implementation
 uses
- classes,mclasses,msegraphics,msebitmap,msefpreadxpm,msegraphicstream,
- msestockobjects,msefpimage;
- 
+ classes,mclasses,msegraphics,msebitmap,msefpreadxpm,msegraphicstream,msefpimage;
+
 type
  tmsefpreaderxpm = class(tfpreaderxpm)
   protected
    procedure InternalRead  (Str: TStream; Img:TFPCustomImage); override;
  end;
- 
-function readgraphic(const source: tstream; 
+
+function readgraphic(const source: tstream;
                 const dest: tobject; var format: string;
                 const params: array of const): boolean;
 begin
