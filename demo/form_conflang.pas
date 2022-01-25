@@ -65,8 +65,10 @@ implementation
 uses
 {$ifdef mse_dynpo}
  po2arrays,
+ msestockobjects_dynpo,
+{$else}
+ msestockobjects,
 {$endif}
-  msestockobjects_dynpo,
   form_potools,
   form_conflang_mfm;
 
