@@ -14,15 +14,15 @@ Those files are in /mseide-msegui/lib/common/lang_dynpo/, just copy all the file
 In the demo those files are already pasted.
 
 This are the arrays needed by msegui himself:
-   lang_stockcaption, lang_modalresult, lang_modalresultnoshortcut : array of msestring;
+lang_stockcaption, lang_modalresult, lang_modalresultnoshortcut : array of msestring;
    
- There is a lang_mainform array in "mseconsts_dynpo.pas"  that can be used by the application,  you may adapt it as you want.
+There is a lang_mainform array in "mseconsts_dynpo.pas"  that can be used by the application,  you may adapt it as you want.
 His enum is  in "msestockobjects_dynpo.pas".
 
 All the translated po files are in directory /demo/lang.
 
 The arrays must be filled at init of your application.
-It is done with the procedure  setlangdemo(TheLang) from po2arrays unit, if TheLang = '' then the default consts are used.
+It is done with the procedure setlangdemo(TheLang) from po2arrays.pas unit, if TheLang = '' then the default consts are used.
 
 For compilation add this parameter: -dmse_dynpo.
 
