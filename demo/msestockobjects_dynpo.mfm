@@ -5,9 +5,7 @@ object stockdata: tstockdata
   top = 59
   moduleclassname = 'tmsedatamodule'
   object glyphs: timagelist
-    width = 15ze;
-   property pagesize;
- end;
+    width = 15
     height = 15
     options = [bmo_monochrome, bmo_masked]
     count = 84

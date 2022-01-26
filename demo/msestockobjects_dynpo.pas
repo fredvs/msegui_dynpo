@@ -34,6 +34,8 @@ var
   // This are the arrays needed by msegui himself
   lang_stockcaption, lang_modalresult, lang_modalresultnoshortcut, lang_extended, lang_langnames: array of msestring;
 
+  // This is the array for mseide
+  
   // This is custom arrays needed by the application, you may adapt it as you want.
   lang_mainform: array of msestring;
 
