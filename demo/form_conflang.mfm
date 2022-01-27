@@ -16,6 +16,7 @@ object conflangfo: tconflangfo
     262
   )
   options = [fo_main, fo_terminateonclose, fo_autoreadstat, fo_autowritestat, fo_savepos, fo_savezorder, fo_savestate]
+  statfile = tstatfile1
   windowopacity = -Inf
   oncreated = oncreat
   moduleclassname = 'tmseform'
@@ -174,5 +175,10 @@ object conflangfo: tconflangfo
     bounds_cy = 15
     caption = 'tlabel3'
     reffontheight = 15
+  end
+  object tstatfile1: tstatfile
+    filename = 'status.sta'
+    left = 26
+    top = 87
   end
 end

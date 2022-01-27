@@ -4,39 +4,12 @@ unit form_conflang;
 interface
 
 uses
-  msetypes,
-  mseglob,
-  mseguiglob,
-  mseguiintf,
-  mseapplication,
-  msestat,
-  msemenus,
-  msegui,
-  msegraphics,
-  msegraphutils,
-  mseevent,
-  mseclasses,
-  msewidgets,
-  mseforms,
-  msesimplewidgets,
-  msegraphedits,
-  mseificomp,
-  mseificompglob,
-  mseifiglob,
-  msescrollbar,
-  msestatfile,
-  mseact,
-  msedataedits,
-  msedragglob,
-  msedropdownlist,
-  mseedit,
-  msegrids,
-  msegridsglob,
-  msestream,
-  msewidgetgrid,
-  SysUtils,
-  msedispwidgets,
-  mserichstring;
+ msetypes,mseglob,mseguiglob,mseguiintf,mseapplication,msestat,msemenus,msegui,
+ msegraphics,msegraphutils,mseevent,mseclasses,msewidgets,mseforms,
+ msesimplewidgets,msegraphedits,mseificomp,mseificompglob,mseifiglob,
+ msescrollbar,msestatfile,mseact,msedataedits,msedragglob,msedropdownlist,
+ mseedit,msegrids,msegridsglob,msestream,msewidgetgrid,SysUtils,msedispwidgets,
+ mserichstring;
 
 type
   tconflangfo = class(tmseform)
@@ -49,6 +22,7 @@ type
     tlabel1: tlabel;
     tlabel2: tlabel;
     tlabel3: tlabel;
+   tstatfile1: tstatfile;
     procedure oncok(const Sender: TObject);
     procedure oncreat(const Sender: TObject);
     procedure oncellev(const Sender: TObject; var info: celleventinfoty);
