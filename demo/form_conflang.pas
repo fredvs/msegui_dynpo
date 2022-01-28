@@ -86,7 +86,7 @@ implementation
 uses
 {$ifdef mse_dynpo}
  po2arrays,
- msestockobjects_dynpo,
+ msestockobjects_dynpo,  // for captions of msegui widgets.
 {$else}
   msestockobjects,
 {$endif}
@@ -112,17 +112,19 @@ begin
     conflangfo.gridlangcode[x] := str;
   end;
 
-  conflangfo.ok.Caption := lang_modalresult[Ord(mr_ok)];
+  conflangfo.ok.Caption := lang_modalresult[Ord(mr_ok)];  // captions from msegui widgets.
 
-  conflangfo.bpotools.Caption := 'Po ' + lang_stockcaption[Ord(sc_tools)];
+  conflangfo.bpotools.Caption := 'Po ' + lang_stockcaption[Ord(sc_tools)]; // captions from msegui widgets.
 
-  conflangfo.Caption := lang_stockcaption[Ord(sc_lang)];
+  conflangfo.Caption := lang_stockcaption[Ord(sc_lang)]; // captions from msegui widgets.
 
-  conflangfo.tlabel1.Caption := lang_myform[Ord(my_test1)];
+  conflangfo.tlabel1.Caption := lang_myform[Ord(my_test1)]; // captions from this application.
 
-  conflangfo.tlabel2.Caption := lang_myform[Ord(my_test2)];
+  conflangfo.tlabel2.Caption := lang_myform[Ord(my_test2)];  // captions from this application.
 
-  conflangfo.tlabel3.Caption := lang_myform[Ord(my_test3)];
+
+  conflangfo.tlabel3.Caption := lang_myform[Ord(my_test3)]; // captions from this application.
+
 {$endif}
   application.ProcessMessages;
 end;

@@ -793,7 +793,7 @@ findhistory=20
 findoptions=1
 editpos=4
  0,-1073741823
- 0,-1073741823
+ 0,135
  0,87
  0,-1073741823
 bookmarks0=0
@@ -829,7 +829,7 @@ nomenumodules=2
  0
 [sourcefo.files_tab]
 firsttab=0
-index=2
+index=1
 [layout]
 windowlayout=563
  [mainfo.basedock]
@@ -1292,7 +1292,7 @@ windowlayout=563
  [debuggerfo.edit_compiler]
  value=Pascal
  [debuggerfo.file_history]
- value=/home/fred/msegui_dynpo/demo/form_potools.pas
+ value=/home/fred/msegui_dynpo/demo/form_conflang.pas
  history=2
   /home/fred/msegui_dynpo/demo/form_potools.pas
   ${PROJECTDIR}/main.pas
@@ -1318,7 +1318,7 @@ windowlayout=563
  rcy=0
  [sourcefo.files_tab]
  firsttab=0
- index=2
+ index=1
  [confideufo.usedefaulteditoroptions]
  value=0
  [cpuc86_64fo]
