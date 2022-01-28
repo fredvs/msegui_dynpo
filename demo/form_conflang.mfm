@@ -45,13 +45,13 @@ object conflangfo: tconflangfo
     rowcount = 6
     datacols.count = 3
     datacols.items = <    
-      item[gridlangcaption]
+      item[gridlangtext]
         colorselect = -1610612731
         coloractive = -1610612731
         colorfocused = -1610612731
         width = 224
         options = [co_readonly, co_disabled, co_savevalue, co_savestate, co_mousescrollrow]
-        widgetname = 'gridlangcaption'
+        widgetname = 'gridlangtext'
         dataclass = tgridmsestringdatalist
         data = (
           (
@@ -100,7 +100,7 @@ object conflangfo: tconflangfo
     datarowheight = 17
     oncellevent = oncellev
     reffontheight = 15
-    object gridlangcaption: tstringedit
+    object gridlangtext: tstringedit
       optionswidget1 = [ow1_fontglyphheight]
       optionsskin = [osk_framebuttononly]
       taborder = 1

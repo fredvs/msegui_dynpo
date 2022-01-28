@@ -79,10 +79,26 @@ finddialog=8
  value=0
  [finddialogfo]
  stackedunder=
- x=716
- y=372
+ x=560
+ y=494
  cx=234
  cy=269
+replacedialog=15
+ [replacedialogfo.promptonreplace]
+ value=1
+ [replacedialogfo.selectedonly]
+ value=0
+ [replacedialogfo.replacetext]
+ value=myform
+ history=2
+  myform
+  
+ [replacedialogfo]
+ stackedunder=
+ x=447
+ y=253
+ cx=254
+ cy=200
 options=114
  [projectoptionsfo.toolshortcuts]
  dropdowncolwidths=3
@@ -447,18 +463,18 @@ settingsautoload=0
 settingsautosave=0
 modulenames=2
  CONFLANGFO
- HEADERFO
+ STOCKDATA
 moduletypes=2
  TCONFLANGFO
- THEADERFO
+ TSTOCKDATA
 modulefiles=2
  /home/fred/msegui_dynpo/demo/form_conflang.mfm
- /home/fred/msegui_dynpo/demo/form_potools.mfm
+ /home/fred/mseide-msegui/lib/common/lang_dynpo/msestockobjects_dynpo.mfm
 befcommandon=0
 makeoptionson=6
  4095
  4095
- 4059
+ 4063
  4095
  4095
  60
@@ -752,8 +768,9 @@ envvarons=0
 [edit]
 hintwidth=314
 hintheight=214
-finddtext=sc_directory
+finddtext=mainform
 findhistory=20
+ mainform
  sc_directory
  ok.ca
  lang_
@@ -773,30 +790,34 @@ findhistory=20
  '2'
  sc_cancelspeech
  sc_path
- stat
 findoptions=1
-editpos=3
+editpos=4
  0,-1073741823
  0,-1073741823
- 45,79
+ 0,87
+ 0,-1073741823
 bookmarks0=0
 bookmarks1=0
 bookmarks2=0
-sourcefiles=3
+bookmarks3=0
+sourcefiles=4
  ${PROJECTDIR}/podemo.pas
  ${PROJECTDIR}/form_conflang.pas
  ${PROJECTDIR}/form_potools.pas
-relpaths=3
+ ${PROJECTDIR}/po2arrays.pas
+relpaths=4
  podemo.pas
  form_conflang.pas
  form_potools.pas
-ismoduletexts=3
+ po2arrays.pas
+ismoduletexts=4
+ 0
  0
  0
  0
 modules=2
+ /home/fred/mseide-msegui/lib/common/lang_dynpo/msestockobjects_dynpo.mfm
  /home/fred/msegui_dynpo/demo/form_conflang.mfm
- /home/fred/msegui_dynpo/demo/form_potools.mfm
 moduleoptions=2
  0
  0
@@ -1007,14 +1028,14 @@ windowlayout=563
  active=0
  visible=0
  [watchpointsfo.grid]
- propcolwidthref=352
+ propcolwidthref=332
  sortdescend0=0
  values1=0
  values1_ci=-1
  width1=33
  sortdescend1=0
  values2=0
- width2=158
+ width2=149
  sortdescend2=0
  width4=34
  sortdescend4=0
@@ -1023,7 +1044,7 @@ windowlayout=563
  width5=38
  sortdescend5=0
  values6=0
- width6=184
+ width6=172
  sortdescend6=0
  [breakpointsfo]
  splitdir=0
@@ -1336,10 +1357,29 @@ windowlayout=563
  cy=449
  rcx=0
  rcy=0
+ [_mse_stockdata_mse_]
+ splitdir=0
+ useroptions=268451963
+ stackedunder=_mse_conflangfo_mse_
+ parent=
+ mdistate=3
+ nx=0
+ ny=0
+ ncx=0
+ ncy=0
+ x=130
+ y=59
+ cx=198
+ cy=85
+ rcx=0
+ rcy=0
+ wsize=0
+ active=0
+ visible=1
  [_mse_conflangfo_mse_]
  splitdir=0
  useroptions=268451963
- stackedunder=_mse_headerfo_mse_
+ stackedunder=projecttreefo
  parent=
  mdistate=3
  nx=0
@@ -1350,25 +1390,6 @@ windowlayout=563
  y=269
  cx=341
  cy=262
- rcx=0
- rcy=0
- wsize=0
- active=0
- visible=1
- [_mse_headerfo_mse_]
- splitdir=0
- useroptions=268451963
- stackedunder=projecttreefo
- parent=
- mdistate=3
- nx=0
- ny=0
- ncx=0
- ncy=0
- x=495
- y=203
- cx=437
- cy=482
  rcx=0
  rcy=0
  wsize=0

@@ -89,6 +89,7 @@ var
 implementation
 
 uses
+  form_conflang,
   form_potools_mfm;
 
 procedure theaderfo.extractcaption(const Sender: TObject; fn: msestring);
@@ -229,7 +230,7 @@ begin
           strcaption := strcaption + lineend + '      ' + trim(str1) + ';';
       end;
     end;
-    tmemoedit1.Value := tmemoedit1.Value + 'end;';
+    tmemoedit1.Value := tmemoedit1.Value + lineend + '  end;';
     file1.Free;
   end;
 end;
@@ -241,9 +242,10 @@ var
   x, y: integer;
   file1: ttextdatastream;
   imodalresultty: modalresultty;
-  imainformty: mainformty;
   iextendedty: extendedty;
   istockcaptionty: stockcaptionty;
+  imyformty: myformty;
+
 begin
 
   setlength(defaultresult, length(en_modalresulttext));
@@ -266,9 +268,9 @@ begin
     defaultresult[y + Ord(iextendedty)] := en_extendedtext[(iextendedty)];
 
   y := length(defaultresult);
-  setlength(defaultresult, length(en_mainformtext) + y);
-  for imainformty := Low(mainformty) to High(mainformty) do
-    defaultresult[y + Ord(imainformty)] := en_mainformtext[(imainformty)];
+  setlength(defaultresult, length(en_myformtext) + y);
+  for imyformty := Low(myformty) to High(myformty) do
+    defaultresult[y + Ord(imyformty)] := en_myformtext[(imyformty)];
 
   // Languages must be the last in po
   y     := length(defaultresult);

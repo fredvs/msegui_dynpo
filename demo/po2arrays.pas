@@ -28,6 +28,7 @@ procedure findpofiles();
 implementation
 
 uses
+  form_conflang,
   msestockobjects_dynpo,
   mseconsts_dynpo;
 
@@ -37,9 +38,6 @@ var
   hasfound: Boolean = False;
   empty: Boolean = False;
   lang_langnamestmp: array of msestring;
-
-
-///////////////
 
 procedure findpofiles();
 var
@@ -123,7 +121,8 @@ var
   imainformty: mainformty;
   iextendedty: extendedty;
   istockcaptionty: stockcaptionty;
-  default_modalresulttext, default_modalresulttextnoshortcut, default_mainformtext, default_stockcaption, default_langnamestext, default_extendedtext: array of msestring;
+  imyformty: myformty;
+  default_myformtext, default_modalresulttext, default_modalresulttextnoshortcut, default_mainformtext, default_stockcaption, default_langnamestext, default_extendedtext: array of msestring;
 begin
 
   str1 := ExtractFilePath(ParamStr(0)) + 'lang' + directoryseparator + 'podemo_' + alang + '.po';
@@ -149,10 +148,10 @@ begin
       lang_extended[Ord(iextendedty)] :=
         en_extendedtext[(iextendedty)];
 
-    setlength(lang_mainform, length(en_mainformtext));
-    for imainformty := Low(mainformty) to High(mainformty) do
-      lang_mainform[Ord(imainformty)] :=
-        en_mainformtext[(imainformty)];
+    setlength(lang_myform, length(en_myformtext));
+    for imyformty := Low(myformty) to High(myformty) do
+      lang_myform[Ord(imyformty)] :=
+        en_myformtext[(imyformty)];
 
     findpofiles();
 
@@ -198,8 +197,8 @@ begin
 
     file1.readln(str1);
 
-    str3 := '';
     str2 := '';
+    str3 := '';
     str4 := '';
 
     while not file1.EOF do
@@ -311,10 +310,10 @@ begin
       default_extendedtext[Ord(iextendedty)] :=
         en_extendedtext[(iextendedty)];
 
-    setlength(default_mainformtext, length(en_mainformtext));
-    for imainformty := Low(mainformty) to High(mainformty) do
-      default_mainformtext[Ord(imainformty)] :=
-        en_mainformtext[(imainformty)];
+    setlength(default_myformtext, length(en_myformtext));
+    for imyformty := Low(myformty) to High(myformty) do
+      default_myformtext[Ord(imyformty)] :=
+        en_myformtext[(imyformty)];
 
     setlength(default_langnamestext, length(en_langnamestext));
     for x := 0 to length(en_langnamestext) - 1 do
@@ -357,7 +356,6 @@ begin
       lang_modalresultnoshortcut[x] := astrt;
     end;
 
-
     setlength(lang_stockcaption, length(default_stockcaption));
 
     for x := 0 to length(default_stockcaption) - 1 do
@@ -396,24 +394,23 @@ begin
 
     end;
 
-    setlength(lang_mainform, length(default_mainformtext));
+    setlength(lang_myform, length(default_myformtext));
 
-    for x := 0 to length(default_mainformtext) - 1 do
+    for x := 0 to length(default_myformtext) - 1 do
     begin
-      dosearch(default_mainformtext, x);
+      dosearch(default_myformtext, x);
 
       if hasfound then
       else
-        astrt := default_mainformtext[x];
+        astrt := default_myformtext[x];
       if trim(astrt) = '' then
-        astrt := default_mainformtext[x];
+        astrt := default_myformtext[x];
 
       astrt := utf8StringReplace(astrt, ',', '‚', [rfReplaceAll]);
       astrt := utf8StringReplace(astrt, #039, '‘', [rfReplaceAll]);
 
-      lang_mainform[x] := astrt;
+      lang_myform[x] := astrt;
     end;
-
 
     setlength(lang_langnames, length(default_langnamestext));
 
