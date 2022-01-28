@@ -245,7 +245,6 @@ var
   iextendedty: extendedty;
   istockcaptionty: stockcaptionty;
   imyformty: myformty;
-
 begin
 
   setlength(defaultresult, length(en_modalresulttext));

@@ -74,7 +74,6 @@ begin
       str1 := utf8StringReplace(str1, 'podemo_', '', [rfReplaceAll]);
       str1 := utf8StringReplace(str1, '.po', '', [rfReplaceAll]);
       lang_langnamestmp[length(lang_langnamestmp) - 1] := '[' + trim(str1) + ']';
-      //writeln(lang_langnamestmp[length(lang_langnamestmp) - 1]);
     end;
 end;
 
@@ -117,12 +116,17 @@ var
   isid: Boolean = False;
   iscontext: Boolean = False;
   ispocontext: Boolean = False;
+  // The enums of msegui widgets:
   imodalresultty: modalresultty;
-  imainformty: mainformty;
   iextendedty: extendedty;
   istockcaptionty: stockcaptionty;
+  // The arrays of msegui widgets:
+  default_modalresulttext, default_modalresulttextnoshortcut, default_stockcaption,
+  default_langnamestext, default_extendedtext: array of msestring;
+  // Your enum
   imyformty: myformty;
-  default_myformtext, default_modalresulttext, default_modalresulttextnoshortcut, default_mainformtext, default_stockcaption, default_langnamestext, default_extendedtext: array of msestring;
+  // Your array
+  default_myformtext: array of msestring;
 begin
 
   str1 := ExtractFilePath(ParamStr(0)) + 'lang' + directoryseparator + 'podemo_' + alang + '.po';
@@ -159,9 +163,6 @@ begin
       setlength(lang_langnames, length(lang_langnamestmp))
     else
       setlength(lang_langnames, length(en_langnamestext));
-
-    //    writeln('length(en_langnamestext) ' + inttostr(length(en_langnamestext)));
-    //       writeln('lang_langnames[x] ' + inttostr(length(lang_langnames)));
 
     for x := 0 to length(en_langnamestext) - 1 do
       lang_langnames[x] := en_langnamestext[x];

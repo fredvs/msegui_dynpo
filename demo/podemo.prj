@@ -21,7 +21,7 @@ order18=0
 [projectoptions]
 projectdir=/home/fred/msegui_dynpo/demo
 projectfilename=/home/fred/msegui_dynpo/demo/podemo.prj
-findinfiledialog=52
+findinfiledialog=53
  [findinfileadialogfo.subdirs]
  value=1
  [findinfileadialogfo.incurrentfile]
@@ -31,9 +31,9 @@ findinfiledialog=52
  [findinfileadialogfo.wholeword]
  value=0
  [findinfileadialogfo.indirectories]
- value=1
- [findinfileadialogfo.inprojectdir]
  value=0
+ [findinfileadialogfo.inprojectdir]
+ value=1
  [findinfileadialogfo.casesensitive]
  value=0
  [findinfileadialogfo.mask]
@@ -53,8 +53,9 @@ findinfiledialog=52
  filefilterindex=0
  filefilter="*.pas" "*.pp" "*.inc"
  [findinfileadialogfo.findtext]
- value=modalresulttext
- history=13
+ value=mainform
+ history=14
+  mainform
   modalresulttext
   msescrollbar
   regunitgroups
@@ -463,13 +464,13 @@ settingsautoload=0
 settingsautosave=0
 modulenames=2
  CONFLANGFO
- STOCKDATA
+ HEADERFO
 moduletypes=2
  TCONFLANGFO
- TSTOCKDATA
+ THEADERFO
 modulefiles=2
  /home/fred/msegui_dynpo/demo/form_conflang.mfm
- /home/fred/mseide-msegui/lib/common/lang_dynpo/msestockobjects_dynpo.mfm
+ /home/fred/msegui_dynpo/demo/form_potools.mfm
 befcommandon=0
 makeoptionson=6
  4095
@@ -768,7 +769,7 @@ envvarons=0
 [edit]
 hintwidth=314
 hintheight=214
-finddtext=mainform
+finddtext=constvaluearray
 findhistory=20
  mainform
  sc_directory
@@ -792,10 +793,10 @@ findhistory=20
  sc_path
 findoptions=1
 editpos=4
- 0,-1073741823
- 0,135
+ 0,11
  0,87
- 0,-1073741823
+ 0,0
+ 0,461
 bookmarks0=0
 bookmarks1=0
 bookmarks2=0
@@ -816,8 +817,8 @@ ismoduletexts=4
  0
  0
 modules=2
- /home/fred/mseide-msegui/lib/common/lang_dynpo/msestockobjects_dynpo.mfm
  /home/fred/msegui_dynpo/demo/form_conflang.mfm
+ /home/fred/msegui_dynpo/demo/form_potools.mfm
 moduleoptions=2
  0
  0
@@ -828,10 +829,15 @@ nomenumodules=2
  0
  0
 [sourcefo.files_tab]
+order=4
+ 0
+ 2
+ 1
+ 3
 firsttab=0
-index=1
+index=3
 [layout]
-windowlayout=563
+windowlayout=568
  [mainfo.basedock]
  splitdir=2
  useroptions=268450944
@@ -949,7 +955,7 @@ windowlayout=563
  [findinfilefo]
  splitdir=0
  useroptions=268451947
- stackedunder=
+ stackedunder=_mse_headerfo_mse_
  parent=
  mdistate=0
  nx=0
@@ -965,7 +971,7 @@ windowlayout=563
  [projecttreefo]
  splitdir=0
  useroptions=268484715
- stackedunder=mainfo
+ stackedunder=findinfilefo
  parent=
  mdistate=3
  nx=0
@@ -1292,7 +1298,7 @@ windowlayout=563
  [debuggerfo.edit_compiler]
  value=Pascal
  [debuggerfo.file_history]
- value=/home/fred/msegui_dynpo/demo/form_conflang.pas
+ value=/home/fred/msegui_dynpo/demo/po2arrays.pas
  history=2
   /home/fred/msegui_dynpo/demo/form_potools.pas
   ${PROJECTDIR}/main.pas
@@ -1317,8 +1323,13 @@ windowlayout=563
  rcx=0
  rcy=0
  [sourcefo.files_tab]
+ order=4
+  0
+  2
+  1
+  3
  firsttab=0
- index=1
+ index=3
  [confideufo.usedefaulteditoroptions]
  value=0
  [cpuc86_64fo]
@@ -1357,25 +1368,6 @@ windowlayout=563
  cy=449
  rcx=0
  rcy=0
- [_mse_stockdata_mse_]
- splitdir=0
- useroptions=268451963
- stackedunder=_mse_conflangfo_mse_
- parent=
- mdistate=3
- nx=0
- ny=0
- ncx=0
- ncy=0
- x=130
- y=59
- cx=198
- cy=85
- rcx=0
- rcy=0
- wsize=0
- active=0
- visible=1
  [_mse_conflangfo_mse_]
  splitdir=0
  useroptions=268451963
@@ -1390,6 +1382,25 @@ windowlayout=563
  y=269
  cx=341
  cy=262
+ rcx=0
+ rcy=0
+ wsize=0
+ active=0
+ visible=1
+ [_mse_headerfo_mse_]
+ splitdir=0
+ useroptions=268451963
+ stackedunder=mainfo
+ parent=
+ mdistate=3
+ nx=0
+ ny=0
+ ncx=0
+ ncy=0
+ x=495
+ y=203
+ cx=437
+ cy=482
  rcx=0
  rcy=0
  wsize=0
