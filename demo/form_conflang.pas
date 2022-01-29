@@ -85,11 +85,9 @@ implementation
 
 uses
 {$ifdef mse_dynpo}
- po2arrays,
- msestockobjects_dynpo,  // for captions of msegui widgets.
-{$else}
-  msestockobjects,
+  po2arrays,
 {$endif}
+  msestockobjects,
   form_potools,
   form_conflang_mfm;
 

@@ -28,9 +28,9 @@ procedure findpofiles();
 implementation
 
 uses
-  form_conflang,
-  msestockobjects_dynpo,
-  mseconsts_dynpo;
+  msestockobjects,
+  mseconsts,
+  form_conflang;
 
 var
   constvaluearray: array of msestring;
