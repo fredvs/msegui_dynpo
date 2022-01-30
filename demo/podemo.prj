@@ -471,7 +471,7 @@ moduletypes=2
  THEADERFO
 modulefiles=2
  /home/fred/msegui_dynpo/demo/form_conflang.mfm
- /home/fred/msegui_dynpo/demo/form_potools.mfm
+ /home/fred/mseide-msegui/tools/potools/form_potools.mfm
 befcommandon=0
 makeoptionson=6
  4095
@@ -793,33 +793,38 @@ findhistory=20
  sc_cancelspeech
  sc_path
 findoptions=1
-editpos=4
+editpos=5
  0,-1073741823
+ 0,303
  0,-1073741823
- 0,-1073741823
- 0,4
+ 0,0
+ 0,133
 bookmarks0=0
 bookmarks1=0
 bookmarks2=0
 bookmarks3=0
-sourcefiles=4
+bookmarks4=0
+sourcefiles=5
  ${PROJECTDIR}/podemo.pas
+ /home/fred/msegui_dynpo/demo/form_potools.pas
  ${PROJECTDIR}/form_conflang.pas
+ ${PROJECTDIR}/form_conflang.mfm
  ${PROJECTDIR}/form_potools.pas
- /home/fred/msegui_dynpo/demo/po2arrays.pas
-relpaths=4
+relpaths=5
  podemo.pas
- form_conflang.pas
  form_potools.pas
- po2arrays.pas
-ismoduletexts=4
+ ../mseide-msegui/tools/potools/form_conflang.pas
+ ../mseide-msegui/tools/potools/form_conflang.mfm
+ ../mseide-msegui/tools/potools/form_potools.pas
+ismoduletexts=5
  0
  0
  0
+ -1
  0
 modules=2
  /home/fred/msegui_dynpo/demo/form_conflang.mfm
- /home/fred/msegui_dynpo/demo/form_potools.mfm
+ /home/fred/mseide-msegui/tools/potools/form_potools.mfm
 moduleoptions=2
  0
  0
@@ -831,9 +836,9 @@ nomenumodules=2
  0
 [sourcefo.files_tab]
 firsttab=0
-index=3
+index=4
 [layout]
-windowlayout=565
+windowlayout=574
  [mainfo.basedock]
  splitdir=2
  useroptions=268450944
@@ -967,7 +972,7 @@ windowlayout=565
  [projecttreefo]
  splitdir=0
  useroptions=268484715
- stackedunder=mainfo
+ stackedunder=_mse_headerfo_mse_
  parent=
  mdistate=3
  nx=0
@@ -1294,12 +1299,21 @@ windowlayout=565
  [debuggerfo.edit_compiler]
  value=Pascal
  [debuggerfo.file_history]
- value=/home/fred/msegui_dynpo/demo/po2arrays.pas
- history=4
+ value=/home/fred/mseide-msegui/tools/potools/form_conflang.mfm
+ history=13
+  /home/fred/mseide-msegui/tools/potools/form_conflang.pas
+  /home/fred/ideu/src/potools.pas
   /home/fred/msegui_dynpo/demo/po2arrays.pas
-  /home/fred/msegui_dynpo/demo/form_conflang.pas
-  /home/fred/msegui_dynpo/demo/form_potools.pas
-  ${PROJECTDIR}/main.pas
+  /home/fred/mseide-msegui/apps/ide/po2arrays.pas
+  /home/fred/ideu/src/po2arrays.pas
+  /home/fred/mseide-msegui/apps/ide/main.pas
+  /home/fred/mseide-msegui/apps/ide/mseide.pas
+  /home/fred/mseide-msegui/lib/common/lang_consts/mseconsts.pas
+  /home/fred/mseide-msegui (copy 1)/lib/common/lang_consts/mseconsts.pas
+  /home/fred/mseide-msegui (copy 1)/lib/common/lang_consts/msestockobjects.pas
+  /home/fred/ideu_captionideu/src/finddialogform.pas
+  /home/fred/ideu_captionideu/src/ideusettings.pas
+  /home/fred/ideu_captionideu/src/potools.pas
  [debuggerfo.project_options]
  value=1
  [debuggerfo.hints]
@@ -1364,7 +1378,7 @@ windowlayout=565
  [_mse_conflangfo_mse_]
  splitdir=0
  useroptions=268451963
- stackedunder=_mse_headerfo_mse_
+ stackedunder=projecttreefo
  parent=
  mdistate=3
  nx=0
@@ -1383,7 +1397,7 @@ windowlayout=565
  [_mse_headerfo_mse_]
  splitdir=0
  useroptions=268451963
- stackedunder=projecttreefo
+ stackedunder=mainfo
  parent=
  mdistate=3
  nx=0
